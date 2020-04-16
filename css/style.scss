@@ -72,7 +72,10 @@ h6 {
     line-height: 1.1;
 }
 
-.wrapper {}
+.wrapper {
+    width: 100%;
+    height: auto;
+}
 
 .main-content {
     position: absolute;
@@ -168,6 +171,11 @@ h6 {
     .nav-link:hover::before {
         width: 100%;
     }
+
+    .nav-link.active {
+        color: #4fc3f7 !important;
+        opacity: 1;
+    }
 }
 
 .body-content {
@@ -211,38 +219,6 @@ h6 {
         font-weight: 400;
         text-transform: uppercase;
         text-align: center;
-    }
-
-    .xl{
-        font-size: 34px;
-    }
-
-    .lg{
-        font-size: 26px;
-    }
-
-    .m{
-        font-size: 20px;
-    }
-
-    .sm{
-        font-size: 15px;
-    }
-
-    .xsm{
-        font-size: 12px;
-    }
-
-    .text-success{
-        color: #4fc3f7;
-    }
-
-    .text-default{
-        color: #3d4451;
-    }
-
-    .bg-success{
-        background-color: #4fc3f7;
     }
 
     .section-about .profile-position {
@@ -426,6 +402,92 @@ h6 {
             }
         }
     }
+
+    #contact{
+        padding-top: 20px;
+        width: 100%;
+
+        .contact{
+
+            .contact-box{
+                background-color: #eeeeee;
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+                display: flex;
+
+                .contact-info{
+                    padding: 40px;
+                    width: 55%;
+
+                    .contact-details {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                            margin-bottom: 13px;
+                        }
+
+                        .title {
+                            display: block;
+                            width: 120px;
+                            float: left;
+                            color: #515969;
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 20px;
+                            text-transform: uppercase;
+                        }
+
+                        .cont {
+                            display: block;
+                            margin-left: 125px;
+                            font-size: 15px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            color: #515969;
+                        }
+
+                        .clearfix {
+                            *zoom: 1;
+                        }
+                    }
+
+                    .sm-icons {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        text-align: right;
+                        color: #4fc3f7;
+                
+                        li {
+                            display: inline-block;
+                            margin: 5px 15px;
+                        }
+                
+                        li a {
+                            color: #4fc3f7;
+                            font-size: 35px;
+                            line-height: 45px;
+                            display: block;
+                            cursor: pointer;
+                        }
+                
+                        li a:hover {
+                            color: #227ba5;
+                        }
+                    }
+                }
+
+                .contact-map{
+                    width: 45%;
+                    .map{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .grid-content {
@@ -497,6 +559,51 @@ h6 {
     line-height: 1.8;
     text-align: center;
     margin-top: 30px;
+}
+
+.logo{
+    color: #919294;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: inherit;
+    line-height: 50px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.xl{
+    font-size: 34px;
+}
+
+.lg{
+    font-size: 26px;
+}
+
+.m{
+    font-size: 20px;
+}
+
+.sm{
+    font-size: 15px;
+}
+
+.xsm{
+    font-size: 12px;
+}
+
+.text-success{
+    color: #4fc3f7;
+}
+
+.text-default{
+    color: #3d4451;
+}
+
+.bg-success{
+    background-color: #4fc3f7;
 }
 
 @media only screen and (width: 768px) {}

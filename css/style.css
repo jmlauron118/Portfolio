@@ -63,6 +63,11 @@ h6 {
   line-height: 1.1;
 }
 
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+
 .main-content {
   position: absolute;
   width: 100%;
@@ -162,6 +167,11 @@ h6 {
   width: 100%;
 }
 
+.main-content .nav-link.active {
+  color: #4fc3f7 !important;
+  opacity: 1;
+}
+
 .body-content {
   z-index: 2;
   position: relative;
@@ -204,38 +214,6 @@ h6 {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-}
-
-.body-content .xl {
-  font-size: 34px;
-}
-
-.body-content .lg {
-  font-size: 26px;
-}
-
-.body-content .m {
-  font-size: 20px;
-}
-
-.body-content .sm {
-  font-size: 15px;
-}
-
-.body-content .xsm {
-  font-size: 12px;
-}
-
-.body-content .text-success {
-  color: #4fc3f7;
-}
-
-.body-content .text-default {
-  color: #3d4451;
-}
-
-.body-content .bg-success {
-  background-color: #4fc3f7;
 }
 
 .body-content .section-about .profile-position {
@@ -432,6 +410,93 @@ h6 {
   padding: 10px 15px;
 }
 
+.body-content #contact {
+  padding-top: 20px;
+  width: 100%;
+}
+
+.body-content #contact .contact .contact-box {
+  background-color: #eeeeee;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body-content #contact .contact .contact-box .contact-info {
+  padding: 40px;
+  width: 55%;
+}
+
+.body-content #contact .contact .contact-box .contact-info .contact-details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.body-content #contact .contact .contact-box .contact-info .contact-details li {
+  margin-bottom: 13px;
+}
+
+.body-content #contact .contact .contact-box .contact-info .contact-details .title {
+  display: block;
+  width: 120px;
+  float: left;
+  color: #515969;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.body-content #contact .contact .contact-box .contact-info .contact-details .cont {
+  display: block;
+  margin-left: 125px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #515969;
+}
+
+.body-content #contact .contact .contact-box .contact-info .contact-details .clearfix {
+  *zoom: 1;
+}
+
+.body-content #contact .contact .contact-box .contact-info .sm-icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  color: #4fc3f7;
+}
+
+.body-content #contact .contact .contact-box .contact-info .sm-icons li {
+  display: inline-block;
+  margin: 5px 15px;
+}
+
+.body-content #contact .contact .contact-box .contact-info .sm-icons li a {
+  color: #4fc3f7;
+  font-size: 35px;
+  line-height: 45px;
+  display: block;
+  cursor: pointer;
+}
+
+.body-content #contact .contact .contact-box .contact-info .sm-icons li a:hover {
+  color: #227ba5;
+}
+
+.body-content #contact .contact .contact-box .contact-map {
+  width: 45%;
+}
+
+.body-content #contact .contact .contact-box .contact-map .map {
+  height: 100%;
+  width: 100%;
+}
+
 .grid-content {
   display: -ms-grid;
   display: grid;
@@ -502,5 +567,50 @@ h6 {
   line-height: 1.8;
   text-align: center;
   margin-top: 30px;
+}
+
+.logo {
+  color: #919294;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: inherit;
+  line-height: 50px;
+  display: block;
+  overflow: hidden;
+  float: left;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.xl {
+  font-size: 34px;
+}
+
+.lg {
+  font-size: 26px;
+}
+
+.m {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 15px;
+}
+
+.xsm {
+  font-size: 12px;
+}
+
+.text-success {
+  color: #4fc3f7;
+}
+
+.text-default {
+  color: #3d4451;
+}
+
+.bg-success {
+  background-color: #4fc3f7;
 }
 /*# sourceMappingURL=style.css.map */
