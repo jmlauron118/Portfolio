@@ -234,11 +234,11 @@ h6 {
         padding-left: 15px;
         padding-right: 15px;
         margin: 0 auto;
+        margin-bottom: 100px;
     }
 
     #about {
-        padding-top: 20px;
-
+        margin-top: 30px;
         .about {
             background-color: #eeeeee;
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
@@ -348,8 +348,6 @@ h6 {
     }
 
     #skill {
-        padding-top: 20px;
-
         .skill {
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 
@@ -373,9 +371,6 @@ h6 {
     }
 
     #experience {
-        padding-top: 20px;
-        width: 100%;
-
         .experience {
             .exp-box {
                 display: flex;
@@ -404,9 +399,6 @@ h6 {
     }
 
     #contact{
-        padding-top: 20px;
-        width: 100%;
-
         .contact{
 
             .contact-box{
@@ -523,7 +515,7 @@ h6 {
 .footer {
     clear: both;
     position: relative;
-    height: 100px;
+    height: 150px;
     background-color: #4fc3f7;
     margin-top: 60px;
 }

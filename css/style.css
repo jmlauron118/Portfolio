@@ -229,10 +229,11 @@ h6 {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .body-content #about {
-  padding-top: 20px;
+  margin-top: 30px;
 }
 
 .body-content #about .about {
@@ -351,10 +352,6 @@ h6 {
           justify-content: center;
 }
 
-.body-content #skill {
-  padding-top: 20px;
-}
-
 .body-content #skill .skill {
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
@@ -373,11 +370,6 @@ h6 {
 .body-content #skill .skill .skill-content .skill-details {
   height: auto;
   padding: 10px;
-}
-
-.body-content #experience {
-  padding-top: 20px;
-  width: 100%;
 }
 
 .body-content #experience .experience .exp-box {
@@ -408,11 +400,6 @@ h6 {
 
 .body-content #experience .experience .exp-details {
   padding: 10px 15px;
-}
-
-.body-content #contact {
-  padding-top: 20px;
-  width: 100%;
 }
 
 .body-content #contact .contact .contact-box {
@@ -533,7 +520,7 @@ h6 {
 .footer {
   clear: both;
   position: relative;
-  height: 100px;
+  height: 150px;
   background-color: #4fc3f7;
   margin-top: 60px;
 }
