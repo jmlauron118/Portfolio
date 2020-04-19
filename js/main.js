@@ -6,15 +6,24 @@
 
 function Portfolio() {
     const _portfolio = this;
+    var backToTop = document.getElementsByClassName("back-to-top")[0];
 
     this.InitPortfolio = (() => {
-
         var navbar = document.getElementById("menu");
         var sticky = navbar.offsetTop;
 
+        showHideElem(backToTop, 0);
 
         window.onscroll = function () {
-            _portfolio.StickyMenu(navbar, sticky)
+            _portfolio.StickyMenu(navbar, sticky);
+            var body = document.getElementsByTagName("BODY")[0];
+            
+            if(body.scrollTop >= 100){
+                showHideElem(backToTop, 1);
+            }
+            else{
+                showHideElem(backToTop, 0);
+            }
         };
 
         _portfolio.StickyMenu(navbar, sticky);
@@ -25,9 +34,26 @@ function Portfolio() {
         document.getElementById("logo").addEventListener("click", () => {
             var url = window.location.href;
             var homeUrl = url.includes("index.html") ? url.split("index.html")[0] + "index.html" : url + "index.html";
+
+            showHideElem(backToTop, 0);
             window.location.replace(homeUrl);
         });
+
+        backToTop.addEventListener("click" ,function(){
+            var body = document.getElementsByTagName("BODY")[0];
+
+            body.scrollTop = 0;
+        });
     });
+
+    function showHideElem(elem, isShown){
+        if(isShown){
+            elem.style.visibility = "visible";
+        } 
+        else{
+            elem.style.visibility = "hidden";
+        }
+    }
 
     this.MenuClickEvent = (() => {
         var allMenu = document.querySelectorAll("a[class^=nav-link]");
