@@ -15,16 +15,27 @@ function Portfolio() {
         showHideElem(backToTop, 0);
 
         window.onscroll = function () {
-            _portfolio.StickyMenu(navbar, sticky);
+            var screenWidth = screen.width;
             var body = document.getElementsByTagName("BODY")[0];
-            
-            if(body.scrollTop >= 100){
+
+            if (body.scrollTop >= 100) {
                 showHideElem(backToTop, 1);
             }
-            else{
+            else {
                 showHideElem(backToTop, 0);
             }
+            
+            if (screenWidth >= 720) {
+                _portfolio.StickyMenu(navbar, sticky);
+            }
         };
+
+        window.addEventListener("resize", () => {
+            if (screen.width < 720) {
+                navbar.classList.remove("sticky");
+                navbar.classList.add("menu");
+            }
+        });
 
         _portfolio.StickyMenu(navbar, sticky);
         _portfolio.UpdateAge();
@@ -39,18 +50,26 @@ function Portfolio() {
             window.location.replace(homeUrl);
         });
 
-        backToTop.addEventListener("click" ,function(){
+        document.getElementsByClassName("mobile-menu")[0].addEventListener("click", () => {
+            document.getElementsByClassName("menu")[0].classList.add("open");
+        });
+
+        document.getElementsByClassName("close-sidebar")[0].addEventListener("click", () => {
+            document.getElementsByClassName("menu")[0].classList.remove("open");
+        });
+
+        backToTop.addEventListener("click", function () {
             var body = document.getElementsByTagName("BODY")[0];
 
             body.scrollTop = 0;
         });
     });
 
-    function showHideElem(elem, isShown){
-        if(isShown){
+    function showHideElem(elem, isShown) {
+        if (isShown) {
             elem.style.visibility = "visible";
-        } 
-        else{
+        }
+        else {
             elem.style.visibility = "hidden";
         }
     }
@@ -66,14 +85,14 @@ function Portfolio() {
                     elem.classList.remove("active");
                 }
 
-                this.classList.add("active"); 
+                this.classList.add("active");
 
                 var id = this.id;
                 var parentId = id.split("-")[1];
                 var parentDiv = document.getElementById(parentId);
                 var topPos = parentDiv.offsetTop;
 
-                document.getElementsByTagName("BODY")[0].scrollTop = topPos-100;
+                document.getElementsByTagName("BODY")[0].scrollTop = topPos - 100;
             });
         }
     });
@@ -104,7 +123,7 @@ function Portfolio() {
                     if (navLink != null) {
                         navLink.classList.add("active");
                     }
-                } 
+                }
             }
         });
     });
