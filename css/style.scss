@@ -72,14 +72,11 @@ h6 {
     line-height: 1.1;
 }
 
-.wrapper {}
-
-.main-content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+@media only screen and (min-width: 720px){
+    .wrapper {
+        width: 100%;
+        height: auto;
+    }
 
     .banner {
         background-image: url(../images/jm1.jpg);
@@ -95,88 +92,336 @@ h6 {
         position: absolute;
     }
 
-    #menu {
-        overflow: hidden;
-    }
-
-    .menu {
-        background-color: transparent;
+    .main-content {
         position: absolute;
-        text-align: right;
         width: 100%;
-        z-index: 3;
-        transition: ease-in-out 0.5s;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    
+        #menu {
+            overflow: hidden;
+        }
+    
+        .menu {
+            background-color: transparent;
+            position: absolute;
+            text-align: right;
+            width: 100%;
+            z-index: 3;
+            transition: ease-in-out 0.5s;
+        }
+    
+        .menu a {
+            font-weight: bold;
+            font-size: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #f2f2f2;
+            padding: 20px 0px;
+            margin: 0px 20px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+    
+        .sticky {
+            background-color: #eeeeee;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            text-align: right;
+            z-index: 3;
+            transition: ease-in-out 0.5s;
+        }
+    
+        .sticky a {
+            font-weight: bold;
+            font-size: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #313e4f;
+            padding: 20px 0px;
+            margin: 0px 20px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+    
+        .menu a:hover,
+        .sticky a:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    
+        .menu a::before,
+        .sticky a::before {
+            transition: 300ms;
+            height: 5px;
+            content: "";
+            position: absolute;
+            background-color: #4fc3f7;
+        }
+    
+        .nav-link::before {
+            width: 0%;
+            bottom: 10px;
+        }
+    
+        .nav-link:hover::before {
+            width: 100%;
+        }
+    
+        .nav-link.active {
+            color: #4fc3f7 !important;
+            opacity: 1;
+        }
     }
 
-    .menu a {
-        font-weight: bold;
-        font-size: 17px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #f2f2f2;
-        padding: 20px 0px;
-        margin: 0px 20px;
-        display: inline-block;
-        position: relative;
-        opacity: 0.75;
-    }
-
-    .sticky {
-        background-color: #eeeeee;
+    .logo{
+        color: #919294;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: inherit;
+        line-height: 50px;
+        display: block;
+        overflow: hidden;
+        float: left;
+        padding-left: 10px;
+        cursor: pointer;
         position: fixed;
         top: 0;
-        width: 100%;
-        overflow: hidden;
-        text-align: right;
-        z-index: 3;
-        transition: ease-in-out 0.5s;
+        z-index: 4
     }
-
-    .sticky a {
-        font-weight: bold;
-        font-size: 17px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #313e4f;
-        padding: 20px 0px;
-        margin: 0px 20px;
-        display: inline-block;
-        position: relative;
-        opacity: 0.75;
-    }
-
-    .menu a:hover,
-    .sticky a:hover {
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    .menu a::before,
-    .sticky a::before {
-        transition: 300ms;
-        height: 5px;
-        content: "";
-        position: absolute;
-        background-color: #4fc3f7;
-    }
-
-    .nav-link::before {
-        width: 0%;
-        bottom: 10px;
-    }
-
-    .nav-link:hover::before {
-        width: 100%;
+    
+    .mobile-men, .close-sidebar{
+        visibility: collapse;
     }
 }
 
+@media only screen and (max-width: 719px){
+    .banner {
+        background-image: url(../images/jm1.jpg);
+        width: 100%;
+        height: 500px;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .mobile-menu{
+        margin-top: 4px;
+        font-size: 25px;
+        color: #4fc3f7;
+        position: absolute;
+        visibility: visible;
+        padding: 20px;
+    }
+
+    .mobile-menu:hover, .close-sidebar:hover{
+        color: rgb(156, 156, 156);
+        cursor: pointer;
+    }    
+    
+    .close-sidebar{
+        font-size: 20px;
+        position: absolute;
+        right: 10;
+        z-index: inherit;
+        color: rgb(202, 202, 202);
+        top: 10px;
+        visibility: visible;
+    }
+    
+    .wrapper {
+        .main-content {
+            width: 35%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            z-index: 3;
+            visibility: visible;
+
+            .logo{
+                color: #919294;
+                font-size: 30px;
+                font-weight: 400;
+                font-family: inherit;
+                line-height: 50px;
+                padding-left: 10px;
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .menu{
+                width: 0;
+                background-color:#313e4f;
+                height: 100%;
+                position: absolute;
+                padding-top: 75px;
+                left: 0;
+                overflow-x: hidden;
+                transition:  width 0.5s;
+
+                &.open{
+                    width: 100% !important;
+                }
+            }
+            
+            .menu a.nav-link{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                color: white;
+                font-size: 20px;
+                padding-left: 15px;
+            }
+            
+            .menu a.nav-link:hover{
+                background-color: #4fc3f7;
+                cursor: pointer;
+            }
+
+            .menu .nav-link.active {
+                background-color: #4fc3f7 !important;
+                opacity: 1;
+            }
+        }
+    }
+
+    .body-content{
+        .info-content{
+            #about .about .about-content{
+                display: flex;
+                flex-direction: column;
+
+                .profile{
+                    height: 100%;
+                    display:block;
+                    margin:auto;
+                }
+
+                .bio{
+                    width: inherit;
+                }
+            }
+
+            #skill .skill .skill-content{
+                .skill-details{
+                    .grid-content {
+                        display: grid;
+                        grid-template-columns: auto;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            #experience .experience {
+                .exp-box{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    text-align: center;
+
+                    .exp-box-item{
+                        width: inherit;
+                    }
+                }
+            }
+
+            #contact .contact .contact-box{
+                display: flex;
+                flex-direction: column;
+
+                .contact-info{
+                    width: inherit;
+                }
+
+                .contact-map{
+                    width: inherit;
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+.xl{
+    font-size: 34px;
+}
+
+.lg{
+    font-size: 26px;
+}
+
+.m{
+    font-size: 20px;
+}
+
+.sm{
+    font-size: 15px;
+}
+
+.xsm{
+    font-size: 12px;
+}
+
+.text-success{
+    color: #4fc3f7;
+}
+
+.text-default{
+    color: #3d4451;
+}
+
+.bg-success{
+    background-color: #4fc3f7;
+}
+
 .body-content {
-    z-index: 2;
+    z-index: 1;
     position: relative;
     padding-top: 20%;
     margin-bottom: 40px;
     border-width: 5px;
     margin: 0 10%;
+
+    .back-to-top{
+        position: fixed;
+        display: none;
+        z-index: 4;
+        width: 55px;
+        height: 55px;
+        background-color: rgb(14, 122, 211);
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        bottom: 0;
+        right: 0;
+        margin: 0 31px 17px 0;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.34);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.34);
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.34);
+        cursor: pointer;
+    }
 
     .profile-title {
         font-size: 36px;
@@ -213,38 +458,6 @@ h6 {
         text-align: center;
     }
 
-    .xl{
-        font-size: 34px;
-    }
-
-    .lg{
-        font-size: 26px;
-    }
-
-    .m{
-        font-size: 20px;
-    }
-
-    .sm{
-        font-size: 15px;
-    }
-
-    .xsm{
-        font-size: 12px;
-    }
-
-    .text-success{
-        color: #4fc3f7;
-    }
-
-    .text-default{
-        color: #3d4451;
-    }
-
-    .bg-success{
-        background-color: #4fc3f7;
-    }
-
     .section-about .profile-position {
         font-size: 18px;
         font-weight: 400;
@@ -255,14 +468,12 @@ h6 {
     .info-content {
         width: 100%;
         max-width: 960px;
-        padding-left: 15px;
-        padding-right: 15px;
         margin: 0 auto;
+        margin-bottom: 100px;
     }
 
     #about {
-        padding-top: 20px;
-
+        margin-top: 30px;
         .about {
             background-color: #eeeeee;
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
@@ -372,8 +583,6 @@ h6 {
     }
 
     #skill {
-        padding-top: 20px;
-
         .skill {
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 
@@ -397,9 +606,6 @@ h6 {
     }
 
     #experience {
-        padding-top: 20px;
-        width: 100%;
-
         .experience {
             .exp-box {
                 display: flex;
@@ -423,6 +629,89 @@ h6 {
 
             .exp-details{
                 padding: 10px 15px;
+            }
+        }
+    }
+
+    #contact{
+        .contact{
+
+            .contact-box{
+                background-color: #eeeeee;
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+                display: flex;
+
+                .contact-info{
+                    padding: 40px;
+                    width: 55%;
+
+                    .contact-details {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                            margin-bottom: 13px;
+                        }
+
+                        .title {
+                            display: block;
+                            width: 120px;
+                            float: left;
+                            color: #515969;
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 20px;
+                            text-transform: uppercase;
+                        }
+
+                        .cont {
+                            display: block;
+                            margin-left: 125px;
+                            font-size: 15px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            color: #515969;
+                        }
+
+                        .clearfix {
+                            *zoom: 1;
+                        }
+                    }
+
+                    .sm-icons {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        text-align: right;
+                        color: #4fc3f7;
+                
+                        li {
+                            display: inline-block;
+                            margin: 5px 15px;
+                        }
+                
+                        li a {
+                            color: #4fc3f7;
+                            font-size: 35px;
+                            line-height: 45px;
+                            display: block;
+                            cursor: pointer;
+                        }
+                
+                        li a:hover {
+                            color: #227ba5;
+                        }
+                    }
+                }
+
+                .contact-map{
+                    width: 45%;
+                    .map{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -461,7 +750,7 @@ h6 {
 .footer {
     clear: both;
     position: relative;
-    height: 100px;
+    height: 150px;
     background-color: #4fc3f7;
     margin-top: 60px;
 }
@@ -498,5 +787,3 @@ h6 {
     text-align: center;
     margin-top: 30px;
 }
-
-@media only screen and (width: 768px) {}
