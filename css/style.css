@@ -24,7 +24,6 @@ body {
 }
 
 h1 span {
-  font-size: 2em;
   font-weight: 200;
   font-size: 36px;
 }
@@ -131,7 +130,7 @@ h6 {
     font-size: 17px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #313e4f;
+    color: #313e4fb9;
     padding: 20px 0px;
     margin: 0px 20px;
     display: inline-block;
@@ -184,6 +183,10 @@ h6 {
 }
 
 @media only screen and (max-width: 719px) {
+  h1 span {
+    font-weight: 200;
+    font-size: 25px;
+  }
   .banner {
     background-image: url(../images/jm1.jpg);
     width: 100%;
@@ -219,7 +222,7 @@ h6 {
     visibility: visible;
   }
   .wrapper .main-content {
-    width: 35%;
+    width: inherit;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -230,7 +233,7 @@ h6 {
   }
   .wrapper .main-content .logo {
     color: #919294;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-family: inherit;
     line-height: 50px;
@@ -262,7 +265,7 @@ h6 {
     transition: width 0.5s;
   }
   .wrapper .main-content .menu.open {
-    width: 100% !important;
+    width: 200px !important;
   }
   .wrapper .main-content .menu a.nav-link {
     display: -webkit-box;
@@ -301,6 +304,9 @@ h6 {
   }
   .body-content .info-content #about .about .about-content .bio {
     width: inherit;
+  }
+  .body-content .info-content #about .about .about-content .bio .profile-title {
+    font-size: 25px;
   }
   .body-content .info-content #skill .skill .skill-content .skill-details .grid-content {
     display: -ms-grid;
@@ -748,9 +754,17 @@ h6 {
 .footer {
   clear: both;
   position: relative;
-  height: 150px;
+  height: 80px;
   background-color: #4fc3f7;
-  margin-top: 60px;
+}
+
+.footer a:nth-child(1) {
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
 }
 
 .btn-default {

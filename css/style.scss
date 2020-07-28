@@ -33,7 +33,6 @@ body {
 }
 
 h1 span {
-    font-size: 2em;
     font-weight: 200;
     font-size: 36px;
 }
@@ -72,7 +71,7 @@ h6 {
     line-height: 1.1;
 }
 
-@media only screen and (min-width: 720px){
+@media only screen and (min-width: 720px){ 
     .wrapper {
         width: 100%;
         height: auto;
@@ -142,7 +141,7 @@ h6 {
             font-size: 17px;
             text-transform: uppercase;
             text-decoration: none;
-            color: #313e4f;
+            color: #313e4fb9;
             padding: 20px 0px;
             margin: 0px 20px;
             display: inline-block;
@@ -202,6 +201,11 @@ h6 {
 }
 
 @media only screen and (max-width: 719px){
+    h1 span {
+        font-weight: 200;
+        font-size: 25px;
+    }
+
     .banner {
         background-image: url(../images/jm1.jpg);
         width: 100%;
@@ -242,7 +246,7 @@ h6 {
     
     .wrapper {
         .main-content {
-            width: 35%;
+            width: inherit;
             height: 100%;
             margin: 0;
             padding: 0;
@@ -253,7 +257,7 @@ h6 {
 
             .logo{
                 color: #919294;
-                font-size: 30px;
+                font-size: 25px;
                 font-weight: 400;
                 font-family: inherit;
                 line-height: 50px;
@@ -278,7 +282,7 @@ h6 {
                 transition:  width 0.5s;
 
                 &.open{
-                    width: 100% !important;
+                    width: 200px !important;
                 }
             }
             
@@ -317,6 +321,9 @@ h6 {
 
                 .bio{
                     width: inherit;
+                    .profile-title{
+                        font-size: 25px;
+                    }
                 }
             }
 
@@ -750,10 +757,19 @@ h6 {
 .footer {
     clear: both;
     position: relative;
-    height: 150px;
+    height: 80px;
     background-color: #4fc3f7;
-    margin-top: 60px;
+
+    a:nth-child(1){
+        height: auto;
+        vertical-align: middle;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+    }
 }
+
 
 .btn-default {
     border: none;

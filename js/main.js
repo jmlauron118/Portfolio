@@ -60,6 +60,15 @@ function Portfolio() {
 
             body.scrollTop = 0;
         });
+
+        if (window.innerWidth < 720) {
+            window.addEventListener("click", (e) => {
+                if (!document.getElementsByClassName("main-content")[0].contains(e.target)) {
+                    console.log(`Clicked Outside`);
+                    document.getElementsByClassName("close-sidebar")[0].click();
+                }
+            });
+        }
     });
 
     function showHideElem(elem, isShown) {
