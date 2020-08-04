@@ -308,6 +308,46 @@ h6 {
   .body-content .info-content #about .about .about-content .bio .profile-title {
     font-size: 25px;
   }
+  .body-content .info-content #about .about .about-content .bio .profile-details {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 13px;
+  }
+  .body-content .info-content #about .about .about-content .bio .profile-details .title {
+    display: block;
+    float: left;
+    color: #515969;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  .body-content .info-content #about .about .about-content .bio .profile-details .cont {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #9da0a7;
+    margin: 0;
+  }
+  .body-content .info-content #about .about .about-content .bio .profile-details .clearfix {
+    *zoom: 1;
+  }
+  .body-content .info-content #about .about .about-content .bio .profile-details .prof-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .body-content .info-content #skill .skill .skill-content .skill-head {
+    height: inherit;
+    background-color: #4fc3f7;
+    padding: 15px 15px 1px 15px;
+  }
   .body-content .info-content #skill .skill .skill-content .skill-details .grid-content {
     display: -ms-grid;
     display: grid;
@@ -341,6 +381,39 @@ h6 {
   }
   .body-content .info-content #contact .contact .contact-box .contact-info {
     width: inherit;
+  }
+  .body-content .info-content #contact .contact .contact-box .contact-info .contact-details {
+    margin: 0;
+    padding: 0;
+  }
+  .body-content .info-content #contact .contact .contact-box .contact-info .contact-details .title {
+    display: block;
+    width: 120px;
+    float: left;
+    color: #515969;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  .body-content .info-content #contact .contact .contact-box .contact-info .contact-details .cont {
+    display: block;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #515969;
+    word-wrap: anywhere;
+  }
+  .body-content .info-content #contact .contact .contact-box .contact-info .contact-details .cont-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .body-content .info-content #contact .contact .contact-box .contact-map {
     width: inherit;
@@ -429,6 +502,7 @@ h6 {
   line-height: 1.2;
   font-weight: 600;
   text-align: center;
+  word-wrap: anywhere;
 }
 
 .body-content .text-subtitle {
@@ -437,6 +511,7 @@ h6 {
   line-height: 1.2;
   font-weight: 500;
   text-align: left;
+  word-wrap: anywhere;
 }
 
 .body-content .text-desc {
@@ -505,18 +580,14 @@ h6 {
 .body-content #about .about .about-content .bio .profile-details {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
-
-.body-content #about .about .about-content .bio .profile-details li {
   margin-bottom: 13px;
 }
 
 .body-content #about .about .about-content .bio .profile-details .title {
   display: block;
-  width: 120px;
   float: left;
   color: #515969;
+  width: 120px;
   font-size: 12px;
   font-weight: 800;
   line-height: 20px;
@@ -530,10 +601,15 @@ h6 {
   font-weight: 400;
   line-height: 20px;
   color: #9da0a7;
+  word-wrap: anywhere;
 }
 
 .body-content #about .about .about-content .bio .profile-details .clearfix {
   *zoom: 1;
+}
+
+.body-content #about .about .about-content .bio .profile-details .prof-line {
+  margin-bottom: 10px;
 }
 
 .body-content #about .about .social-media {
@@ -653,11 +729,6 @@ h6 {
 .body-content #contact .contact .contact-box .contact-info .contact-details {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
-
-.body-content #contact .contact .contact-box .contact-info .contact-details li {
-  margin-bottom: 13px;
 }
 
 .body-content #contact .contact .contact-box .contact-info .contact-details .title {
@@ -680,8 +751,8 @@ h6 {
   color: #515969;
 }
 
-.body-content #contact .contact .contact-box .contact-info .contact-details .clearfix {
-  *zoom: 1;
+.body-content #contact .contact .contact-box .contact-info .contact-details .cont-line {
+  margin-bottom: 10px;
 }
 
 .body-content #contact .contact .contact-box .contact-info .sm-icons {
