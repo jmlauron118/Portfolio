@@ -28,7 +28,7 @@ function Portfolio() {
         };
 
         window.addEventListener("resize", () => {
-            if (window.innerWidth < 720) {
+            if (window.innerWidth < 769) {
                 navbar.classList.remove("sticky");
                 navbar.classList.add("menu");
             }
@@ -61,7 +61,7 @@ function Portfolio() {
             body.scrollTop = 0;
         });
 
-        if (window.innerWidth < 720) {
+        if (window.innerWidth < 769) {
             window.addEventListener("click", (e) => {
                 if (!document.getElementsByClassName("main-content")[0].contains(e.target)) {
                     console.log(`Clicked Outside`);
@@ -144,7 +144,7 @@ function Portfolio() {
     this.StickyMenu = ((navbar, sticky) => {
         var screenWidth = window.innerWidth;
 
-        if (screenWidth >= 720) {
+        if (screenWidth >= 769) {
             if (window.pageYOffset > sticky) {
                 navbar.classList.remove("menu");
                 navbar.classList.add("sticky");
