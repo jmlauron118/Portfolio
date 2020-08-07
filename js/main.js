@@ -11,6 +11,7 @@ function Portfolio() {
     this.InitPortfolio = (() => {
         var navbar = document.getElementById("menu");
         var sticky = navbar.offsetTop;
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
         showHideElem(backToTop, 0);
 
@@ -28,13 +29,13 @@ function Portfolio() {
         };
 
         window.addEventListener("resize", () => {
-            if (window.innerWidth < 769) {
+            if (width < 769) {
                 navbar.classList.remove("sticky");
                 navbar.classList.add("menu");
             }
-        });
 
-        document.getElementById("test").text = `Width is ${window.innerWidth}`;
+            document.getElementById("test").text = `innerWidth is ${window.innerWidth} | Device width: ${screen.width}`;
+        });
 
         _portfolio.StickyMenu(navbar, sticky);
         _portfolio.UpdateAge();
@@ -63,7 +64,7 @@ function Portfolio() {
             body.scrollTop = 0;
         });
 
-        if (window.innerWidth < 769) {
+        if (width < 769) {
             window.addEventListener("click", (e) => {
                 if (!document.getElementsByClassName("main-content")[0].contains(e.target)) {
                     document.getElementsByClassName("close-sidebar")[0].click();
@@ -143,7 +144,7 @@ function Portfolio() {
     });
 
     this.StickyMenu = ((navbar, sticky) => {
-        var screenWidth = window.innerWidth;
+        var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
         if (screenWidth >= 769) {
             if (window.pageYOffset > sticky) {
@@ -154,6 +155,5 @@ function Portfolio() {
                 navbar.classList.add("menu");
             }
         }
-
     });
 }
