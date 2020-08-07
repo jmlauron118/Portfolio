@@ -34,6 +34,8 @@ function Portfolio() {
             }
         });
 
+        document.getElementById("test").text = `Width is ${window.innerWidth}`;
+
         _portfolio.StickyMenu(navbar, sticky);
         _portfolio.UpdateAge();
         _portfolio.MenuClickEvent();
@@ -64,7 +66,6 @@ function Portfolio() {
         if (window.innerWidth < 769) {
             window.addEventListener("click", (e) => {
                 if (!document.getElementsByClassName("main-content")[0].contains(e.target)) {
-                    console.log(`Clicked Outside`);
                     document.getElementsByClassName("close-sidebar")[0].click();
                 }
             });
