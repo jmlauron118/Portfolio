@@ -11,7 +11,7 @@ function Portfolio() {
     this.InitPortfolio = (() => {
         var navbar = document.getElementById("menu");
         var sticky = navbar.offsetTop;
-        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        var width = window.innerWidth;//(window.innerWidth > 0) ? window.innerWidth : screen.width;
 
         showHideElem(backToTop, 0);
 
@@ -34,7 +34,7 @@ function Portfolio() {
                 navbar.classList.add("menu");
             }
 
-            document.getElementById("test").text = `innerWidth is ${window.innerWidth} | Device width: ${screen.width}`;
+            document.getElementById("test").text = `Width is ${width}`;
         });
 
         _portfolio.StickyMenu(navbar, sticky);
@@ -144,7 +144,7 @@ function Portfolio() {
     });
 
     this.StickyMenu = ((navbar, sticky) => {
-        var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        var screenWidth = window.innerWidth;//(window.innerWidth > 0) ? window.innerWidth : screen.width;
 
         if (screenWidth >= 769) {
             if (window.pageYOffset > sticky) {
