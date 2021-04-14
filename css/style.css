@@ -62,7 +62,7 @@ h6 {
   line-height: 1.1;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   .wrapper {
     width: 100%;
     height: auto;
