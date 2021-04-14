@@ -11,7 +11,7 @@ function Portfolio() {
     this.InitPortfolio = (() => {
         var navbar = document.getElementById("menu");
         var sticky = navbar.offsetTop;
-        var width = window.innerWidth;//(window.innerWidth > 0) ? window.innerWidth : screen.width;
+        var width = document.documentElement.clientWidth;//window.innerWidth;//(window.innerWidth > 0) ? window.innerWidth : screen.width;
 
         showHideElem(backToTop, 0);
 
