@@ -17,7 +17,7 @@ function Portfolio() {
 
         window.onscroll = function () {
             var body = document.getElementsByTagName("BODY")[0];
-
+ 
             if (body.scrollTop >= 100) {
                 showHideElem(backToTop, 1);
             }
@@ -97,16 +97,12 @@ function Portfolio() {
 
     this.ResizeWindow = ((width, navbar) =>{
         if (width < 768) {
-            console.log('mobile view')
             navbar.classList.remove("sticky");
             navbar.classList.add("menu");
             
             document.getElementsByClassName("close-sidebar")[0].addEventListener("click", () => {
                 document.getElementsByClassName("menu")[0].classList.remove("open");
             });
-        }
-        else{
-            console.log('web view')
         }
     });
 
