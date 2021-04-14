@@ -5,14 +5,14 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
-@viewport {
-    width: device-width ;
-    zoom: 1.0 ;
-} 
+// @viewport {
+//     width: device-width ;
+//     zoom: 1.0 ;
+// } 
 
-@-ms-viewport {
-    width: device-width ;
-}
+// @-ms-viewport {
+//     width: device-width ;
+// }
 
 html,
 body {
@@ -318,6 +318,7 @@ h6 {
 
     .body-content{
         .info-content{
+            margin-top: 8em !important;
             #about .about .about-content{
                 display: flex;
                 flex-direction: column;
