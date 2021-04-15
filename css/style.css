@@ -23,6 +23,11 @@ body {
   min-height: 100vh;
 }
 
+a.links {
+  text-decoration: none;
+  color: #4fc3f7;
+}
+
 h1 span {
   font-weight: 200;
   font-size: 36px;
@@ -66,6 +71,8 @@ h6 {
   .wrapper {
     width: 100%;
     height: auto;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
   }
   .banner {
     background-image: url(../images/jm1.jpg);
@@ -186,6 +193,10 @@ h6 {
   h1 span {
     font-weight: 200;
     font-size: 25px;
+  }
+  .wrapper {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
   }
   .banner {
     background-image: url(../images/jm1.jpg);
@@ -417,6 +428,33 @@ h6 {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .body-content .info-content #contact .contact .contact-box .contact-info .contact-details .ask-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .body-content .info-content #contact .contact .contact-box .contact-info .contact-details .ask-content .ask-title {
+    float: left;
+    color: #515969;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  .body-content .info-content #contact .contact .contact-box .contact-info .contact-details .ask-content .ask-cont {
+    display: block;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #515969;
+    word-wrap: anywhere;
   }
   .body-content .info-content #contact .contact .contact-box .contact-map {
     width: inherit;
@@ -756,6 +794,36 @@ h6 {
 
 .body-content #contact .contact .contact-box .contact-info .contact-details .cont-line {
   margin-bottom: 10px;
+}
+
+.body-content #contact .contact .contact-box .contact-info .contact-details .ask-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.body-content #contact .contact .contact-box .contact-info .contact-details .ask-content .ask-title {
+  float: left;
+  color: #515969;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.body-content #contact .contact .contact-box .contact-info .contact-details .ask-content .ask-cont {
+  display: block;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #515969;
+  word-wrap: anywhere;
 }
 
 .body-content #contact .contact .contact-box .contact-map {

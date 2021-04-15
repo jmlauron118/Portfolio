@@ -41,6 +41,11 @@ body {
     min-height: 100vh;
 }
 
+a.links{
+    text-decoration: none;
+    color: #4fc3f7;
+}
+
 h1 span {
     font-weight: 200;
     font-size: 36px;
@@ -84,6 +89,7 @@ h6 {
     .wrapper {
         width: 100%;
         height: auto;
+        transition: all 1s ease;
     }
 
     .banner {
@@ -213,6 +219,10 @@ h6 {
     h1 span {
         font-weight: 200;
         font-size: 25px;
+    }
+
+    .wrapper{
+        transition: all 1s ease;
     }
 
     .banner {
@@ -441,6 +451,31 @@ h6 {
                             display: flex;
                             justify-content: space-between;
                             flex-wrap: wrap;
+                        }
+
+                        .ask-content{
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                        
+                            .ask-title {
+                                float: left;
+                                color: #515969;
+                                font-size: 12px;
+                                font-weight: 750;
+                                line-height: 20px;
+                                text-transform: uppercase;
+                            }
+                        
+                            .ask-cont {
+                                display: block;
+                                margin: 0;
+                                font-size: 15px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                color: #515969;
+                                word-wrap: anywhere;
+                            }
                         }
                     }
                 }
@@ -768,6 +803,31 @@ h6 {
 
                         .cont-line{
                             margin-bottom: 10px;
+                        }
+
+                        .ask-content{
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                        
+                            .ask-title {
+                                float: left;
+                                color: #515969;
+                                font-size: 12px;
+                                font-weight: 750;
+                                line-height: 20px;
+                                text-transform: uppercase;
+                            }
+                        
+                            .ask-cont {
+                                display: block;
+                                margin: 0;
+                                font-size: 15px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                color: #515969;
+                                word-wrap: anywhere;
+                            }
                         }
                     }
                 }

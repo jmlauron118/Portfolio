@@ -14,6 +14,7 @@ function Portfolio() {
         var width = document.documentElement.clientWidth;//window.innerWidth;//(window.innerWidth > 0) ? window.innerWidth : screen.width;
 
         showHideElem(backToTop, 0);
+        document.getElementById("txtTitle").text = "JM Lauron"
 
         window.onscroll = function () {
             var body = document.getElementsByTagName("BODY")[0];
@@ -23,6 +24,7 @@ function Portfolio() {
             }
             else {
                 showHideElem(backToTop, 0);
+                _portfolio.ChangePageTitle();
             }
 
             _portfolio.StickyMenu(navbar, sticky);
@@ -95,6 +97,19 @@ function Portfolio() {
         }
     });
 
+    this.ChangePageTitle = ((pageName = "") =>{
+        var currPageName = document.getElementById("txtTitle").text;
+        var splitName = currPageName.split("—");
+
+        if(pageName != ""){
+            pageName = pageName.charAt(0).toUpperCase() + pageName.slice(1).toLowerCase();
+            document.getElementById("txtTitle").text = pageName + " — " +(splitName.length > 1 ? splitName[1].trim() : splitName[0].trim());
+        }
+        else{
+            document.getElementById("txtTitle").text = splitName.length > 1 ? splitName[1].trim() : splitName[0].trim();
+        }
+    });
+
     this.ResizeWindow = ((width, navbar) =>{
         if (width < 768) {
             navbar.classList.remove("sticky");
@@ -131,6 +146,8 @@ function Portfolio() {
 
                     if (navLink != null) {
                         navLink.classList.add("active");
+                        console.log(a.text);
+                        _portfolio.ChangePageTitle(navLink.text);
                     }
                 }
             }
