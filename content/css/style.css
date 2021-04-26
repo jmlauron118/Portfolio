@@ -75,7 +75,7 @@ h6 {
     transition: all 1s ease;
   }
   .banner {
-    background-image: url(../images/jm1.jpg);
+    background-image: url(../../images/jm1.jpg);
     width: 100%;
     height: 500px;
     background-position: top;
