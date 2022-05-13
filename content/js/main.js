@@ -49,7 +49,11 @@ function Portfolio() {
         });
 
         document.getElementsByClassName("mobile-menu")[0].addEventListener("click", () => {
-            document.getElementsByClassName("menu")[0].classList.add("open");
+            var menu = document.getElementsByClassName("menu")[0];
+
+            if(menu.length > 0){
+                menu.classList.add("open");
+            }
         });
 
         backToTop.addEventListener("click", function () {
@@ -146,7 +150,6 @@ function Portfolio() {
 
                     if (navLink != null) {
                         navLink.classList.add("active");
-                        console.log(a.text);
                         _portfolio.ChangePageTitle(navLink.text);
                     }
                 }
