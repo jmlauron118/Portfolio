@@ -49,10 +49,10 @@ function Portfolio() {
         });
 
         document.getElementsByClassName("mobile-menu")[0].addEventListener("click", () => {
-            var menu = document.getElementsByClassName("menu")[0];
+            var menu = document.getElementsByClassName("menu");
 
             if(menu.length > 0){
-                menu.classList.add("open");
+                menu[0].classList.add("open");
             }
         });
 
