@@ -184,7 +184,8 @@ h6 {
     top: 0;
     z-index: 4;
   }
-  .mobile-men, .close-sidebar {
+  .mobile-men,
+  .close-sidebar {
     visibility: collapse;
   }
 }
@@ -219,7 +220,8 @@ h6 {
     visibility: visible;
     padding: 20px;
   }
-  .mobile-menu:hover, .close-sidebar:hover {
+  .mobile-menu:hover,
+  .close-sidebar:hover {
     color: #9c9c9c;
     cursor: pointer;
   }
@@ -357,17 +359,13 @@ h6 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .body-content .info-content #skill .skill .skill-content .skill-head {
-    height: inherit;
-    background-color: #4fc3f7;
-    padding: 15px 15px 1px 15px;
+  .body-content .info-content .skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .body-content .info-content #skill .skill .skill-content .skill-details .grid-content {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    padding: 10px;
+  .body-content .info-content .skill .skill-content {
+    width: 100%;
   }
   .body-content .info-content #experience .experience .exp-box {
     display: -webkit-box;
@@ -703,24 +701,64 @@ h6 {
           justify-content: center;
 }
 
-.body-content #skill .skill {
+.body-content .skill:last-child {
+  margin-bottom: -0.75rem;
+}
+
+.body-content .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.body-content .skill .skill-icon {
+  font-size: 3.5rem;
+  color: #4fc3f7;
+}
+
+.body-content .skill .skill-content {
+  width: calc(calc(100% / 3) - 5px);
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-}
-
-.body-content #skill .skill .skill-content .skill-head {
-  height: 40px;
-  background-color: #4fc3f7;
-  padding: 15px 15px 0px 15px;
-}
-
-.body-content #skill .skill .skill-content .skill-head h3 {
-  color: white;
-}
-
-.body-content #skill .skill .skill-content .skill-details {
+  background-color: #eeeeee;
   height: auto;
-  padding: 10px;
+  margin: 10px 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.body-content .skill .skill-content:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.body-content .skill .skill-content .skill-head {
+  height: inherit;
+  background-color: #4fc3f7;
+  height: 6px;
+}
+
+.body-content .skill .skill-content .skill-details {
+  padding-top: 1rem;
+}
+
+.body-content .skill .skill-content .skill-details ul {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.body-content .skill .skill-content .skill-details ul li {
+  font-size: 1rem;
 }
 
 .body-content #experience .experience .exp-box {
@@ -742,6 +780,15 @@ h6 {
   background-color: #eeeeee;
   height: auto;
   margin: 10px 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.body-content #experience .experience .exp-box-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .body-content #experience .experience .exp-head {
