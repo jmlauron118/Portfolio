@@ -286,6 +286,7 @@ h6 {
   .body-content .info-content #about .about .about-content {
     display: flex;
     flex-direction: column;
+    padding-bottom: 2em;
   }
   .body-content .info-content #about .about .about-content .profile {
     height: 100%;
@@ -519,10 +520,12 @@ h6 {
 .body-content #about .about .about-content {
   display: flex;
   background-color: #fbf6f2;
+  padding-bottom: 2em;
 }
 .body-content #about .about .about-content .profile {
   width: 50%;
-  height: 372px;
+  height: -moz-min-content;
+  height: min-content;
   padding: 57px 50px 0px 50px;
 }
 .body-content #about .about .about-content .profile img {
