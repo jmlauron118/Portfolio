@@ -193,12 +193,13 @@ function Portfolio() {
     }
   };
 
-  this.CalcYrExp = () =>{
+  this.CalcYrExp = () => {
     var diffMs = new Date() - new Date("2018-12-29");
     var totalExpDt = new Date(diffMs);
-    
-    document.getElementById("lblExp").innerHTML = Math.abs(totalExpDt.getUTCFullYear() - 1970) + "+";
-  }
+
+    document.getElementById("lblExp").innerHTML =
+      Math.abs(totalExpDt.getUTCFullYear() - 1970) + "+";
+  };
 
   function showHideElem(elem, isShown) {
     if (isShown) {
