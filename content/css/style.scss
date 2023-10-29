@@ -303,7 +303,7 @@ h6 {
 
       .menu {
         width: 0;
-        background-color: var(--color-value, $light-b-text-color);
+        background-color: $light-b-text-color;
         height: 100%;
         position: absolute;
         padding-top: 75px;
