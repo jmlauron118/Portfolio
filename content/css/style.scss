@@ -1,18 +1,17 @@
+$light-b-text-color: #313e4f;
+$light-head-bg: #fbf6f2;
+$light-card-bg: #eeeeee;
+$light-shade-color: #4fc3f7;
+$btn-default-bg: #f1f1f1;
+$icon-default: #fff;
+$icon-hover: #084866;
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
-
-// @viewport {
-//     width: device-width ;
-//     zoom: 1.0 ;
-// }
-
-// @-ms-viewport {
-//     width: device-width ;
-// }
 
 html,
 body {
@@ -22,28 +21,36 @@ body {
   padding: 0;
 }
 
-// body::-webkit-scrollbar{
-//     display: none; /*hide scroll bar for chrome*/
-// }
+body::-webkit-scrollbar {
+  display: none; /*hide scroll bar for chrome*/
+}
 
-// body::scrollbar{
-//     display: none;
-// }
+body::scrollbar {
+  display: none;
+}
 
 body {
-  //-ms-overflow-style: none; /*hide scroll bar for Explore and Edge*/
-  /* scrollbar-width: none; */
+  -ms-overflow-style: none; /*hide scroll bar for Explore and Edge*/
+  scrollbar-width: none;
   font-family: "Open Sans", sans-serif;
   background-color: #fcf7f5;
   scroll-behavior: smooth;
   height: auto;
   position: relative;
   min-height: 100vh;
+
+  &.dark-mode {
+    background-color: #1e242c;
+  }
+
+  &.light-mode {
+    background-color: #fcf7f5;
+  }
 }
 
 a.links {
   text-decoration: none;
-  color: #4fc3f7;
+  color: $light-shade-color;
 }
 
 h1 span {
@@ -142,7 +149,7 @@ h6 {
     }
 
     .sticky {
-      background-color: #eeeeee;
+      background-color: var(--menu-color, $light-card-bg);
       position: fixed;
       top: 0;
       width: 100%;
@@ -157,7 +164,7 @@ h6 {
       font-size: 17px;
       text-transform: uppercase;
       text-decoration: none;
-      color: #313e4fb9;
+      color: var(--color-value, $light-b-text-color);
       padding: 20px 0px;
       margin: 0px 20px;
       display: inline-block;
@@ -177,7 +184,7 @@ h6 {
       height: 5px;
       content: "";
       position: absolute;
-      background-color: #4fc3f7;
+      background-color: $light-shade-color;
     }
 
     .nav-link::before {
@@ -190,7 +197,7 @@ h6 {
     }
 
     .nav-link.active {
-      color: #4fc3f7 !important;
+      color: $light-shade-color !important;
       opacity: 1;
     }
   }
@@ -211,7 +218,7 @@ h6 {
     z-index: 4;
   }
 
-  .mobile-men,
+  .mobile-menu,
   .close-sidebar {
     visibility: collapse;
   }
@@ -245,7 +252,7 @@ h6 {
   .mobile-menu {
     margin-top: 4px;
     font-size: 8vw;
-    color: #4fc3f7;
+    color: $light-shade-color;
     position: absolute;
     visibility: visible;
     padding: 20px;
@@ -296,7 +303,7 @@ h6 {
 
       .menu {
         width: 0;
-        background-color: #313e4f;
+        background-color: $light-b-text-color;
         height: 100%;
         position: absolute;
         padding-top: 75px;
@@ -319,7 +326,7 @@ h6 {
       }
 
       .menu a.nav-link:hover {
-        background-color: #4fc3f7;
+        background-color: $light-shade-color;
         cursor: pointer;
       }
 
@@ -343,16 +350,13 @@ h6 {
           display: block;
           margin: auto;
 
-          #profile{
+          #profile {
             border-radius: 50%;
           }
         }
 
         .bio {
           width: inherit;
-          // width: 100%;
-          // padding: 57px 50px 0px 50px;
-          // color: #515969;
 
           .profile-title {
             font-size: 25px;
@@ -366,7 +370,7 @@ h6 {
             .title {
               display: block;
               float: left;
-              color: #515969;
+              color: var(--color-value, $light-b-text-color);
               font-size: 12px;
               font-weight: 800;
               line-height: 20px;
@@ -402,25 +406,6 @@ h6 {
         }
       }
 
-      //   .skill {
-      //     display: flex;
-      //     .skill-content {
-      //       .skill-head {
-      //         height: inherit;
-      //         background-color: #4fc3f7;
-      //         padding: 15px 15px 1px 15px;
-      //       }
-
-      //       .skill-details {
-      //         .grid-content {
-      //           display: grid;
-      //           grid-template-columns: auto;
-      //           padding: 10px;
-      //         }
-      //       }
-      //     }
-      //   }
-
       #experience .experience {
         .exp-box {
           display: flex;
@@ -449,7 +434,7 @@ h6 {
               display: block;
               width: 120px;
               float: left;
-              color: #515969;
+              color: var(--color-value, $light-b-text-color);
               font-size: 12px;
               font-weight: 750;
               line-height: 20px;
@@ -462,7 +447,7 @@ h6 {
               font-size: 15px;
               font-weight: 500;
               line-height: 20px;
-              color: #515969;
+              color: var(--color-value, $light-b-text-color);
               word-wrap: anywhere;
             }
 
@@ -479,7 +464,7 @@ h6 {
 
               .ask-title {
                 float: left;
-                color: #515969;
+                color: var(--color-value, $light-b-text-color);
                 font-size: 12px;
                 font-weight: 750;
                 line-height: 20px;
@@ -492,7 +477,7 @@ h6 {
                 font-size: 15px;
                 font-weight: 500;
                 line-height: 20px;
-                color: #515969;
+                color: var(--color-value, $light-b-text-color);
                 word-wrap: anywhere;
               }
             }
@@ -529,15 +514,15 @@ h6 {
 }
 
 .text-success {
-  color: #4fc3f7;
+  color: $light-shade-color;
 }
 
 .text-default {
-  color: #3d4451;
+  color: var(--color-value, $light-b-text-color);
 }
 
 .bg-success {
-  background-color: #4fc3f7;
+  background-color: $light-shade-color;
 }
 
 .body-content {
@@ -571,6 +556,37 @@ h6 {
     cursor: pointer;
   }
 
+  .change-mode {
+    position: fixed;
+    display: none;
+    z-index: 4;
+    width: 55px;
+    height: 55px;
+    background-color: rgb(210, 208, 208);
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    left: 1rem;
+    margin: 0 31px 17px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.34);
+    cursor: pointer;
+
+    &.dark-active {
+      background-color: rgb(10, 58, 98);;
+    }
+
+    &.light-active {
+      background-color: rgb(14, 122, 211);;
+    }
+  }
+
   .profile-title {
     font-size: 36px;
     line-height: 1.1;
@@ -579,7 +595,7 @@ h6 {
   }
 
   .text-title {
-    color: #3d4451;
+    color: var(--color-value, $light-b-text-color);
     line-height: 1.2;
     font-weight: 600;
     text-align: center;
@@ -587,7 +603,7 @@ h6 {
   }
 
   .text-subtitle {
-    color: #3d4451;
+    color: var(--color-value, $light-b-text-color);
     font-size: 20px;
     line-height: 1.2;
     font-weight: 500;
@@ -596,13 +612,18 @@ h6 {
   }
 
   .text-desc {
-    color: #3d4451;
+    color: var(--color-value, $light-b-text-color);
     font-weight: 400;
     text-align: center;
   }
 
+  .job-address {
+    margin: 0;
+    color: var(--color-value, $light-b-text-color);
+  }
+
   .job-desc {
-    color: #3d4451;
+    color: var(--color-value, $light-b-text-color);
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
@@ -625,12 +646,12 @@ h6 {
   #about {
     margin-top: 30px;
     .about {
-      background-color: #eeeeee;
+      background-color: var(--card-color, $light-card-bg);
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 
       .about-content {
         display: flex;
-        background-color: #fbf6f2;
+        background-color: var(--head-bg, $light-head-bg);
         padding-bottom: 2em;
 
         .profile {
@@ -651,7 +672,7 @@ h6 {
         .bio {
           width: 100%;
           padding: 57px 50px 0px 50px;
-          color: #515969;
+          color: var(--color-value, $light-b-text-color);
 
           .profile-details {
             margin: 0;
@@ -661,7 +682,7 @@ h6 {
             .title {
               display: block;
               float: left;
-              color: #515969;
+              color: var(--color-value, $light-b-text-color);
               width: 120px;
               font-size: 12px;
               font-weight: 800;
@@ -693,7 +714,7 @@ h6 {
       .social-media {
         width: 100%;
         height: 45px;
-        background-color: #4fc3f7;
+        background-color: var(--shade-color, $light-shade-color);
         padding: 15px 0;
 
         .sm-icons {
@@ -701,7 +722,7 @@ h6 {
           padding: 0;
           list-style: none;
           text-align: center;
-          color: white;
+          // color: white;
 
           li {
             display: inline-block;
@@ -709,7 +730,7 @@ h6 {
           }
 
           li a {
-            color: #fff;
+            color: var(--icon-default, $icon-default);
             font-size: 35px;
             line-height: 45px;
             display: block;
@@ -717,7 +738,7 @@ h6 {
           }
 
           li a:hover {
-            color: #227ba5;
+            color: var(--icon-hover, $icon-hover);
           }
         }
 
@@ -746,12 +767,12 @@ h6 {
     text-align: center;
     .skill-icon {
       font-size: 3.5rem;
-      color: #4fc3f7;
+      color: $light-shade-color;
     }
     .skill-content {
       width: calc(calc(100% / 3) - 5px);
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-      background-color: #eeeeee;
+      background-color: var(--card-color, $light-card-bg);
       height: auto;
       margin: 10px 0;
       transition: transform 0.3s;
@@ -760,7 +781,7 @@ h6 {
       }
       .skill-head {
         height: inherit;
-        background-color: #4fc3f7;
+        background-color: var(--shade-color, $light-shade-color);
         height: 6px;
       }
       .skill-details {
@@ -790,7 +811,7 @@ h6 {
       .exp-box-item {
         width: 49%;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-        background-color: #eeeeee;
+        background-color: var(--card-color, $light-card-bg);
         height: auto;
         margin: 10px 0;
         transition: transform 0.3s;
@@ -800,7 +821,7 @@ h6 {
       }
 
       .exp-head {
-        background-color: #4fc3f7;
+        background-color: var(--shade-color, $light-shade-color);
         height: 6px;
       }
 
@@ -813,7 +834,7 @@ h6 {
   #contact {
     .contact {
       .contact-box {
-        background-color: #eeeeee;
+        background-color: var(--card-color, $light-card-bg);
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
         display: flex;
 
@@ -829,7 +850,7 @@ h6 {
               display: block;
               width: 120px;
               float: left;
-              color: #515969;
+              color: var(--color-value, $light-b-text-color);
               font-size: 12px;
               font-weight: 600;
               line-height: 20px;
@@ -842,7 +863,7 @@ h6 {
               font-size: 15px;
               font-weight: 500;
               line-height: 20px;
-              color: #515969;
+              color: var(--color-value, $light-b-text-color);
             }
 
             .cont-line {
@@ -856,7 +877,7 @@ h6 {
 
               .ask-title {
                 float: left;
-                color: #515969;
+                color: var(--color-value, $light-b-text-color);
                 font-size: 12px;
                 font-weight: 750;
                 line-height: 20px;
@@ -869,7 +890,7 @@ h6 {
                 font-size: 15px;
                 font-weight: 500;
                 line-height: 20px;
-                color: #515969;
+                color: var(--color-value, $light-b-text-color);
                 word-wrap: anywhere;
               }
             }
@@ -897,7 +918,7 @@ h6 {
 .grid-item {
   font-size: 15px;
   padding: 20px;
-  color: #515969;
+  color: var(--color-value, $light-b-text-color);
   line-height: 1.2;
   font-weight: 500;
 }
@@ -912,7 +933,7 @@ h6 {
 .progress-bar-fill {
   display: block;
   height: 10px;
-  background-color: #4fc3f7;
+  background-color: $light-shade-color;
   border-radius: 3px;
 
   transition: width 500ms ease-in-out;
@@ -922,7 +943,7 @@ h6 {
   clear: both;
   position: relative;
   height: inherit;
-  background-color: #4fc3f7;
+  // background-color: $light-shade-color;
 
   .footer-contact {
     display: flex;
@@ -933,16 +954,18 @@ h6 {
     .cont-box {
       width: 50px;
       height: 50px;
-      background-color: #313e4f;
+      background-color: var(--color-value, $light-b-text-color);
       display: flex;
       justify-content: center;
       align-items: center;
       margin-left: 15px;
       border-radius: 100%;
+      cursor: pointer;
+      text-decoration: none;
     }
 
     a {
-      color: #4fc3f7;
+      color: var(--shade-color, $light-shade-color);//$light-shade-color;
       font-size: 25px;
       line-height: 45px;
       display: block;
@@ -950,12 +973,12 @@ h6 {
     }
 
     a:hover {
-      color: whitesmoke;
+      color: var(--a-hover, whitesmoke);
     }
   }
 
   .footer-mess {
-    background-color: #313e4f;
+    background-color: $light-b-text-color;
     height: 50px;
     padding: 10px;
   }
@@ -974,20 +997,20 @@ h6 {
   }
 
   .dark {
-    color: #313e4f;
+    color: var(--color-value, $light-b-text-color);
   }
 }
 
 .btn-default {
   border: none;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-  background-color: rgb(241, 241, 241);
+  background-color: var(--btn-default, $btn-default-bg);
   padding: 15px 32px;
   text-decoration: none;
   display: inline-block;
   margin-top: 14px;
   font-size: 16px;
-  color: #313e4f;
+  color: var(--color-value, $light-b-text-color);
   text-align: center;
   font-weight: 700;
 }
@@ -1000,7 +1023,7 @@ h6 {
 }
 
 .text-style {
-  color: #313e4f;
+  color: var(--color-value, $light-b-text-color);
   font-size: 20px;
   font-weight: 300;
   line-height: 1.8;

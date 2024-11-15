@@ -7,6 +7,7 @@
 function Portfolio() {
   const _portfolio = this;
   var backToTop = document.getElementsByClassName("back-to-top")[0];
+  var changeMode = document.getElementsByClassName("change-mode")[0];
   var rtime;
   var timeout = false;
   var delta = 200;
@@ -17,16 +18,16 @@ function Portfolio() {
     var sticky = navbar.offsetTop;
     var width = document.documentElement.clientWidth; //window.innerWidth;//(window.innerWidth > 0) ? window.innerWidth : screen.width;
 
-    showHideElem(backToTop, 0);
+    _portfolio.showHideElem(backToTop, 0);
     document.getElementById("txtTitle").text = "JM Lauron";
 
     window.onscroll = function () {
       var body = document.getElementsByTagName("BODY")[0];
 
       if (body.scrollTop >= 100) {
-        showHideElem(backToTop, 1);
+        _portfolio.showHideElem(backToTop, 1);
       } else {
-        showHideElem(backToTop, 0);
+        _portfolio.showHideElem(backToTop, 0);
         _portfolio.ChangePageTitle();
       }
 
@@ -46,6 +47,7 @@ function Portfolio() {
     _portfolio.UpdateAge();
     _portfolio.MenuClickEvent();
     _portfolio.HoverEvent();
+    _portfolio.CalcYrExp();
 
     document.getElementById("logo").addEventListener("click", () => {
       var url = window.location.href;
@@ -53,7 +55,7 @@ function Portfolio() {
         ? url.split("index.html")[0] + "index.html"
         : url + "index.html";
 
-      showHideElem(backToTop, 0);
+      _portfolio.showHideElem(backToTop, 0);
       window.location.replace(homeUrl);
     });
 
@@ -67,7 +69,7 @@ function Portfolio() {
         }
       });
 
-    backToTop.addEventListener("click", function () {
+    backToTop.addEventListener("click", () => {
       var body = document.getElementsByTagName("BODY")[0];
 
       body.scrollTop = 0;
@@ -79,6 +81,10 @@ function Portfolio() {
       ) {
         document.getElementsByClassName("close-sidebar")[0].click();
       }
+    });
+
+    changeMode.addEventListener("click", () => {
+      _portfolio.ChangeMode();
     });
   };
 
@@ -192,13 +198,64 @@ function Portfolio() {
     }
   };
 
-  function showHideElem(elem, isShown) {
+  this.CalcYrExp = () => {
+    var diffMs = new Date() - new Date("2018-12-29");
+    var totalExpDt = new Date(diffMs);
+
+    document.getElementById("lblExp").innerHTML =
+      Math.abs(totalExpDt.getUTCFullYear() - 1970) + "+";
+  };
+
+  this.showHideElem = (elem, isShown) => {
     if (isShown) {
       elem.style.visibility = "visible";
     } else {
       elem.style.visibility = "hidden";
     }
-  }
+  };
+
+  this.ChangeMode = () => {
+    var body = document.querySelector("body").classList;
+    var btnMode = document.getElementsByClassName("mode")[0];
+
+    if (body.contains("light-mode")) {
+      //set to dark mode
+      document.documentElement.style.setProperty("--color-value", "#ffffff");
+      document.documentElement.style.setProperty("--head-bg", "#272727");
+      -document.documentElement.style.setProperty(
+        "--card-color",
+        "transparent"
+      );
+      document.documentElement.style.setProperty("--menu-color", "#132132");
+      document.documentElement.style.setProperty("--shade-color", "#0c74a3");
+      document.documentElement.style.setProperty("--btn-default", "#0c74a3");
+      document.documentElement.style.setProperty("--icon-default", "#084866");
+      document.documentElement.style.setProperty("--icon-hover", "#fff");
+      document.documentElement.style.setProperty("--a-hover", "#313e4f");
+
+      btnMode.children[0].className = "far fa-sun";
+      btnMode.parentElement.className = "change-mode dark-active";
+
+      body.remove("light-mode");
+      body.add("dark-mode");
+    } else {
+      document.documentElement.style.setProperty("--color-value", "#313e4f");
+      document.documentElement.style.setProperty("--head-bg", "#fbf6f2");
+      document.documentElement.style.setProperty("--card-color", "#eeeeee");
+      document.documentElement.style.setProperty("--menu-color", "#eeeeee");
+      document.documentElement.style.setProperty("--shade-color", "#4fc3f7");
+      document.documentElement.style.setProperty("--btn-default", "#f1f1f1");
+      document.documentElement.style.setProperty("--icon-default", "#fff");
+      document.documentElement.style.setProperty("--icon-hover", "#084866");
+      document.documentElement.style.setProperty("--a-hover", "whitesmoke");
+
+      btnMode.children[0].className = "fas fa-moon";
+      btnMode.parentElement.className = "change-mode light-active";
+
+      body.remove("dark-mode");
+      body.add("light-mode");
+    }
+  };
 
   function resizeEnd() {
     var navbar = document.getElementById("menu");
