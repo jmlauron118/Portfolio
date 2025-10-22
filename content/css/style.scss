@@ -419,6 +419,19 @@ h6 {
         }
       }
 
+      #projects .projects {
+        .proj-box {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          text-align: center;
+
+          .proj-box-item {
+            width: inherit;
+          }
+        }
+      }
+
       #contact .contact .contact-box {
         display: flex;
         flex-direction: column;
@@ -579,11 +592,11 @@ h6 {
     cursor: pointer;
 
     &.dark-active {
-      background-color: rgb(10, 58, 98);;
+      background-color: rgb(10, 58, 98);
     }
 
     &.light-active {
-      background-color: rgb(14, 122, 211);;
+      background-color: rgb(14, 122, 211);
     }
   }
 
@@ -770,7 +783,7 @@ h6 {
       color: $light-shade-color;
     }
     .skill-content {
-      width: calc(calc(100% / 3) - 5px);
+      width: calc(calc(100% / 2) - 5px);
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
       background-color: var(--card-color, $light-card-bg);
       height: auto;
@@ -826,6 +839,38 @@ h6 {
       }
 
       .exp-details {
+        padding: 10px 15px;
+      }
+    }
+  }
+
+  #projects {
+    .projects {
+      .proj-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+      }
+
+      .proj-box-item {
+        width: 49%;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+        background-color: var(--card-color, $light-card-bg);
+        height: auto;
+        margin: 10px 0;
+        transition: transform 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .proj-head {
+        background-color: var(--shade-color, $light-shade-color);
+        height: 6px;
+      }
+
+      .proj-details {
         padding: 10px 15px;
       }
     }
