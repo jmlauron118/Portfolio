@@ -83,6 +83,7 @@ function Portfolio() {
       }
     });
 
+    _portfolio.ChangeMode();
     changeMode.addEventListener("click", () => {
       _portfolio.ChangeMode();
     });
@@ -116,8 +117,7 @@ function Portfolio() {
     var splitName = currPageName.split("—");
 
     if (pageName != "") {
-      pageName =
-        pageName.charAt(0).toUpperCase() + pageName.slice(1).toLowerCase();
+      pageName = pageName.trim().charAt(0).toUpperCase() + pageName.trim().slice(1).toLowerCase();
       document.getElementById("txtTitle").text =
         pageName +
         " — " +
@@ -129,6 +129,7 @@ function Portfolio() {
   };
 
   this.ResizeWindow = (width, navbar) => {
+    console.log(width);
     if (width < 768) {
       navbar.classList.remove("sticky");
       navbar.classList.add("menu");
@@ -138,6 +139,10 @@ function Portfolio() {
         .addEventListener("click", () => {
           document.getElementsByClassName("menu")[0].classList.remove("open");
         });
+    }
+    else{
+      navbar.classList.remove("menu");
+      navbar.classList.add("sticky");
     }
   };
 
@@ -218,27 +223,7 @@ function Portfolio() {
     var body = document.querySelector("body").classList;
     var btnMode = document.getElementsByClassName("mode")[0];
 
-    if (body.contains("light-mode")) {
-      //set to dark mode
-      document.documentElement.style.setProperty("--color-value", "#ffffff");
-      document.documentElement.style.setProperty("--head-bg", "#272727");
-      -document.documentElement.style.setProperty(
-        "--card-color",
-        "transparent"
-      );
-      document.documentElement.style.setProperty("--menu-color", "#132132");
-      document.documentElement.style.setProperty("--shade-color", "#0c74a3");
-      document.documentElement.style.setProperty("--btn-default", "#0c74a3");
-      document.documentElement.style.setProperty("--icon-default", "#084866");
-      document.documentElement.style.setProperty("--icon-hover", "#fff");
-      document.documentElement.style.setProperty("--a-hover", "#313e4f");
-
-      btnMode.children[0].className = "far fa-sun";
-      btnMode.parentElement.className = "change-mode dark-active";
-
-      body.remove("light-mode");
-      body.add("dark-mode");
-    } else {
+    if (body.contains("dark-mode")) {
       document.documentElement.style.setProperty("--color-value", "#313e4f");
       document.documentElement.style.setProperty("--head-bg", "#fbf6f2");
       document.documentElement.style.setProperty("--card-color", "#eeeeee");
@@ -254,6 +239,26 @@ function Portfolio() {
 
       body.remove("dark-mode");
       body.add("light-mode");
+    } else {
+      //set to dark mode
+      document.documentElement.style.setProperty("--color-value", "#ffffff");
+      document.documentElement.style.setProperty("--head-bg", "#272727");
+      -document.documentElement.style.setProperty(
+        "--card-color",
+        "transparent"
+      );
+      document.documentElement.style.setProperty("--menu-color", "#132132");
+      document.documentElement.style.setProperty("--shade-color", "#0c74a3");
+      document.documentElement.style.setProperty("--btn-default", "#0c74a3");
+      document.documentElement.style.setProperty("--icon-default", "#084866");
+      document.documentElement.style.setProperty("--icon-hover", "#fff");
+      document.documentElement.style.setProperty("--a-hover", "#313e4f");
+
+      btnMode.children[0].className = "far fa-lightbulb";
+      btnMode.parentElement.className = "change-mode dark-active";
+
+      body.remove("light-mode");
+      body.add("dark-mode");
     }
   };
 
