@@ -159,7 +159,7 @@ body {
   min-height: 100vh;
 }
 body.dark-mode {
-  background-color: #1e242c;
+  background-color: #1d2836;
 }
 body.light-mode {
   background-color: #fcf7f5;
@@ -209,24 +209,25 @@ h6 {
   line-height: 1.1;
 }
 
+.banner {
+  background-image: url(../../images/banner.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+
 @media all and (min-width: 768px) {
   .wrapper {
     width: 100%;
     height: auto;
     transition: all 1s ease;
-  }
-  .banner {
-    background-image: url(../../images/banner.svg);
-    width: 100%;
-    height: 500px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    position: absolute;
   }
   .main-content {
     position: absolute;
@@ -252,7 +253,7 @@ h6 {
     font-size: 17px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #f2f2f2;
+    color: var(--color-value, #313e4f);
     padding: 20px 0px;
     margin: 0px 20px;
     display: inline-block;
@@ -332,19 +333,6 @@ h6 {
   }
   .wrapper {
     transition: all 1s ease;
-  }
-  .banner {
-    background-image: url(../../images/banner.svg);
-    width: 100%;
-    height: 500px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    z-index: 1;
   }
   .mobile-menu {
     margin-top: 4px;
@@ -706,7 +694,6 @@ h6 {
 }
 .body-content #about .about .about-content {
   display: flex;
-  background-color: var(--head-bg, #fbf6f2);
   padding-bottom: 2em;
 }
 .body-content #about .about .about-content .profile {
@@ -716,7 +703,7 @@ h6 {
   padding: 57px 50px 0px 50px;
 }
 .body-content #about .about .about-content .profile #profile {
-  border: 0;
+  border: solid 3px var(--color-value, #1d2836);
   height: auto;
   max-width: 100%;
   vertical-align: middle;
@@ -968,6 +955,28 @@ h6 {
   height: 100%;
   width: 100%;
 }
+.body-content #contact .contact .quote {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-value, #313e4f);
+  display: flex;
+  justify-content: center;
+}
+.body-content #contact .contact .quote blockquote {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.body-content #contact .contact .quote blockquote q {
+  font-style: italic;
+}
+.body-content #contact .contact .quote figcaption {
+  right: 4rem;
+  position: relative;
+}
 
 .grid-content {
   display: grid;
@@ -1008,6 +1017,7 @@ h6 {
   justify-content: center;
   align-items: center;
   height: 100px;
+  margin-top: 3.5rem;
 }
 .footer .footer-contact .cont-box {
   width: 50px;

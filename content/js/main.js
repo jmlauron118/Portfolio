@@ -92,15 +92,12 @@ function Portfolio() {
   this.MenuClickEvent = () => {
     var allMenu = document.querySelectorAll("a[class^=nav-link]");
 
-    for (var i = 0; i < allMenu.length; i++) {
-      allMenu[i].addEventListener("click", function () {
-        var a = Array.from(document.querySelectorAll("a[class^='nav-link']"));
+    allMenu.forEach((button) => {
+      button.addEventListener("click", function (e) {
+        const activeMenu = document.querySelector("a.nav-link.active");
 
-        for (let elem of a) {
-          elem.classList.remove("active");
-        }
-
-        this.classList.add("active");
+        e.target.classList.add("active");
+        activeMenu.classList.remove("active");
 
         var id = this.id;
         var parentId = id.split("-")[1];
@@ -109,7 +106,26 @@ function Portfolio() {
 
         document.getElementsByTagName("BODY")[0].scrollTop = topPos - 100;
       });
-    }
+    });
+
+    // for (var i = 0; i < allMenu.length; i++) {
+    //   allMenu[i].addEventListener("click", function () {
+    //     var a = Array.from(document.querySelectorAll("a[class^='nav-link']"));
+
+    //     for (let elem of a) {
+    //       elem.classList.remove("active");
+    //     }
+
+    //     this.classList.add("active");
+
+    //     var id = this.id;
+    //     var parentId = id.split("-")[1];
+    //     var parentDiv = document.getElementById(parentId);
+    //     var topPos = parentDiv.offsetTop;
+
+    //     document.getElementsByTagName("BODY")[0].scrollTop = topPos - 100;
+    //   });
+    // }
   };
 
   this.ChangePageTitle = (pageName = "") => {
@@ -129,7 +145,6 @@ function Portfolio() {
   };
 
   this.ResizeWindow = (width, navbar) => {
-    console.log(width);
     if (width < 768) {
       navbar.classList.remove("sticky");
       navbar.classList.add("menu");
@@ -144,11 +159,14 @@ function Portfolio() {
       navbar.classList.remove("menu");
       navbar.classList.add("sticky");
     }
+
+    console.log("Resized to: " + width);
   };
 
   this.HoverEvent = () => {
     var section = document.querySelectorAll("div[class='info-content']");
 
+    ///ang salarin
     window.addEventListener("scroll", function () {
       var currentScroll = window.pageYOffset;
       var currentSection;
@@ -243,10 +261,7 @@ function Portfolio() {
       //set to dark mode
       document.documentElement.style.setProperty("--color-value", "#ffffff");
       document.documentElement.style.setProperty("--head-bg", "#272727");
-      -document.documentElement.style.setProperty(
-        "--card-color",
-        "transparent"
-      );
+      -document.documentElement.style.setProperty("--card-color","#1e242c");
       document.documentElement.style.setProperty("--menu-color", "#132132");
       document.documentElement.style.setProperty("--shade-color", "#0c74a3");
       document.documentElement.style.setProperty("--btn-default", "#0c74a3");

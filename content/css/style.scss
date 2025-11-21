@@ -1,4 +1,4 @@
-@import './base/fonts';
+@use './base/fonts' as *;
 
 $light-b-text-color: #313e4f;
 $light-head-bg: #fbf6f2;
@@ -8,7 +8,7 @@ $btn-default-bg: #f1f1f1;
 $icon-default: #fff;
 $icon-hover: #084866;
 $main-font: Mulish;
-$dark-mode: #1e242c;
+$dark-mode: #1d2836;
 $light-mode: #fcf7f5;
 
 * {
@@ -104,26 +104,25 @@ h6 {
   line-height: 1.1;
 }
 
+.banner {
+    background-image: url(../../images/banner.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
 @media all and (min-width: 768px) {
-  //(min-device-width: 769px)
   .wrapper {
     width: 100%;
     height: auto;
     transition: all 1s ease;
-  }
-
-  .banner {
-    background-image: url(../../images/banner.svg);
-    width: 100%;
-    height: 500px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    position: absolute;
   }
 
   .main-content {
@@ -152,7 +151,7 @@ h6 {
       font-size: 17px;
       text-transform: uppercase;
       text-decoration: none;
-      color: #f2f2f2;
+      color: var(--color-value, $light-b-text-color);
       padding: 20px 0px;
       margin: 0px 20px;
       display: inline-block;
@@ -236,8 +235,13 @@ h6 {
   }
 }
 
+// @media all and (max-width: 900px) {
+//   .nav-link {
+//     font-size: 15px !important;
+//   }
+// }
+
 @media all and (max-width: 768px) {
-  //and (max-device-width: 768px)
   h1 span {
     font-weight: 200;
     font-size: 25px;
@@ -245,20 +249,6 @@ h6 {
 
   .wrapper {
     transition: all 1s ease;
-  }
-
-  .banner {
-    background-image: url(../../images/banner.svg);
-    width: 100%;
-    height: 500px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    z-index: 1;
   }
 
   .mobile-menu {
@@ -680,7 +670,6 @@ h6 {
 
       .about-content {
         display: flex;
-        background-color: var(--head-bg, $light-head-bg);
         padding-bottom: 2em;
 
         .profile {
@@ -690,7 +679,7 @@ h6 {
           padding: 57px 50px 0px 50px;
 
           #profile {
-            border: 0;
+            border: solid 3px var(--color-value, $dark-mode);
             height: auto;
             max-width: 100%;
             vertical-align: middle;
@@ -992,6 +981,32 @@ h6 {
           }
         }
       }
+
+      .quote {
+        margin-top: 2rem;
+        width: 100%;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-value, $light-b-text-color);
+        display: flex;
+        justify-content: center;
+
+        blockquote {
+          display: flex;
+          justify-content: center;
+          flex-direction: column ;
+
+          q {
+            font-style: italic;
+          }
+        }
+
+        figcaption {
+          right: 4rem;
+          position: relative;
+        }
+      }
     }
   }
 }
@@ -1037,6 +1052,7 @@ h6 {
     justify-content: center;
     align-items: center;
     height: 100px;
+    margin-top: 3.5rem;
 
     .cont-box {
       width: 50px;
@@ -1063,7 +1079,6 @@ h6 {
       color: var(--a-hover, whitesmoke);
     }
   }
-
   .footer-mess {
     background-color: $light-b-text-color;
     height: 50px;
