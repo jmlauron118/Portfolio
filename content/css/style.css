@@ -748,14 +748,14 @@ section,
   text-decoration: none;
   border: 2px solid var(--default-color-dark);
   padding: 8px 15px;
-  font-size: 12px;
+  font-size: 10px;
   cursor: pointer;
   font-weight: bold;
   background: transparent;
   position: relative;
   overflow: hidden;
-  margin-bottom: 2px;
-  transition: color 1.5s;
+  margin-bottom: 0.5rem;
+  transition: color 1s;
 }
 .projects .accordion .accordion-item .accordion-content .proj-btn-content .proj-btn:hover {
   color: var(--contrast-color);
@@ -797,7 +797,7 @@ section,
 }
 .projects .accordion .accordion-item.active .accordion-content {
   padding: 20px;
-  max-height: 500px;
+  max-height: 600px;
   border: var(--accordion-content) solid 2px;
 }
 .projects .accordion .accordion-item.active .icon {
