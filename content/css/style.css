@@ -733,7 +733,8 @@ section,
   margin: 10px 0;
   padding: 0 20px;
   overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.5s ease;
+  opacity: 0;
+  transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
   position: relative;
   z-index: 1;
 }
@@ -799,6 +800,7 @@ section,
   padding: 20px;
   max-height: 600px;
   border: var(--accordion-content) solid 2px;
+  opacity: 1;
 }
 .projects .accordion .accordion-item.active .icon {
   transform: rotate(180deg);
