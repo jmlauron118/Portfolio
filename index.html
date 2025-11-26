@@ -2,507 +2,494 @@
 
 <head>
     <meta name="viewport" content="width=device-width">
+    <link href="content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./content/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="./images/icon.png">
-    <title id="txtTitle"></title>
+    <title id="txtTitle">Home — JM Lauron</title>
 </head>
 
-<body class="light-mode">
-    <div class="banner"></div>
-    <div class="wrapper">
-        <div class="main-content">
-            <a class="mobile-menu"><i class="fa fa-bars"></i></a>
-
-            <div id="menu" class="menu">
-                <a class="close-sidebar"><i class="fa fa-times"></i></a>
-                <div class="logo" id="logo">
-                    <span class="text-success">JM</span> portfolio
-                </div>
-                <a class="nav-link active" id="nav-about"><i class="fas fa-address-card"></i> ABOUT</a>
-                <a class="nav-link" id="nav-skill"><i class="fas fa-brain"></i> SKILLS</a>
-                <a class="nav-link" id="nav-projects"><i class="fas fa-list-alt"></i> PROJECTS</a>
-                <a class="nav-link" id="nav-experience"><i class="fas fa-user-tie"></i> EXPERIENCE</a>
-                <a class="nav-link" id="nav-contact"><i class="fas fa-id-badge"></i> CONTACT</a>
-            </div>
+<body>
+    <header id="header" class="header dark-background">
+        <a class="header-toggle d-xl-none"><i class="fas fa-bars"></i></a>
+        <div class="profile-img">
+            <img src="images/profile.jpg" alt="">
         </div>
-        <div class="body-content">
-            <div class="back-to-top">
-                <a class="back"><i class="fa fa-chevron-up"></i></a>
+        <a class="logo">
+            <h1>Jan Mark Lauron</h1>
+        </a>
+        <div class="resume">
+            <a id="btnResume" class="resume-btn" href="pdf/CV.pdf" download="jmlauron_resume.pdf">Download
+                Resume</a>
+        </div>
+        <div class="social-links">
+            <a href="https://x.com/jmlauron18" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://web.facebook.com/jmlauron118?ref=bookmarks" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/jmlauron118/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/jan-mark-lauron-014576a8/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a id="nav-home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a id="nav-about"><i class="fas fa-address-card"></i> About</a></li>
+                <li><a id="nav-skills"><i class="fas fa-brain"></i> Skills</a></li>
+                <li><a id="nav-projects"><i class="fas fa-list-alt"></i> Projects</a></li>
+                <li><a id="nav-experience"><i class="fas fa-user-tie"></i> Experience</a></li>
+                <li><a id="nav-contact"><i class="fas fa-id-badge"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="back-to-top">
+            <a class="back"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!--Home Section-->
+        <section id="home" class="home section dark-background">
+            <img src="images/banner.jpg" alt="" class="">
+            <div class="container">
+                <h2>Jan Mark Lauron</h2>
+                <p>I'm <span class="typed" data-typed-items="Software Developer, Web Developer, Programmer, Application Support Engineer">Software Developer</span></p>
             </div>
-            <div class="change-mode light-active">
-                <a class="mode"><i class="fas fa-lightbulb"></i></a>
+        </section>
+        <!--About Section-->
+        <section id="about" class="about section">
+            <div class="container section-title">
+                <h2>About</h2>
+                <p>
+                    &emsp;&emsp; I’m a software developer with over <span id="lblExp"></span> years of experience in the IT industry. I’ve worked on Windows, web, 
+                    and mobile applications, and I also have hands-on experience supporting operations and maintenance projects. These roles have taught me how to 
+                    build reliable solutions that scale across different platforms. I’m adaptable, curious, and always eager to learn new technologies. I enjoy 
+                    working in fast-paced environments where I can solve problems, take on challenges, and design software that makes a real impact.
+                    <br>
+                    <br>
+                    &emsp;&emsp;I focus on building future-proof code, designing user-friendly experiences, and balancing technical precision with real-world relevance. 
+                    I aim for clarity, scalability, and meaningful impact.
+                </p>
             </div>
-            <div class="info-content">
-                <div id="about" class="info-content">
-                    <div class="about">
-                        <div class="about-content">
-                            <div class="profile">
-                                <img id="profile" src="images/profile.jpg" />
+            <div class="container">
+                <div class="row about-wrapper">
+                    <div class="profile-card col-lg-4">
+                        <img src="images/profile-2.PNG" alt="">
+                    </div>
+                    <div class="col-lg-8 content ms-5">
+                        <h4 class="sub-title py-3">Personal Details</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                <li><i class="fas fa-greater-than"></i> <strong>Birthday:</strong> <span>18 January 1996</span></li>
+                                <li><i class="fas fa-greater-than"></i> <strong>Phone:</strong> <span>+639310322745</span></li>
+                                <li><i class="fas fa-greater-than"></i> <strong>City:</strong> <span>General Santos City, Philippines</span></li>
+                                </ul>
                             </div>
-                            <div class="bio">
-                                <h1 class="profile-title"><span>Hi! I'm</span> Jan Mark Lauron</h1>
-                                <h2 class="profile-position">Software Developer</h2>
-                                <hr>
-                                <div class="profile-details">
-                                    <div class="prof-line">
-                                        <strong class="title">Age</strong>
-                                        <span id="age" class="cont"></span>
-                                    </div>
-                                    <div class="prof-line">
-                                        <strong class="title">Address</strong>
-                                        <span class="cont">Blk 40, Lot 18, Employees Village, Brgy. Fatima, Uhaw,
-                                            General Santos City, South Cotabato, Philippines</span>
-                                    </div>
-                                    <div class="prof-line">
-                                        <strong class="title">E-mail</strong>
-                                        <span class="cont">janmarklauron@gmail.com</span>
-                                    </div>
-                                    <div class="prof-line">
-                                        <strong class="title">Phone</strong>
-                                        <span class="cont">+639310322745</span>
-                                    </div>
-                                </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                <li><i class="fas fa-greater-than"></i> <strong>Age:</strong> <span id="age"></span></li>
+                                <li><i class="fas fa-greater-than"></i> <strong>Email:</strong> <span>janmarklauron@gmail.com</span></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="social-media">
-                            <ul class="sm-icons">
-                                <li>
-                                    <a href="https://x.com/jmlauron18" target="_blank">
-                                        <i class="fab fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://web.facebook.com/jmlauron118?ref=bookmarks" target="_blank">
-                                        <i class="fab fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/jmlauron118/" target="_blank">
-                                        <i class="fab fa-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/jan-mark-lauron-014576a8/" target="_blank">
-                                        <i class="fab fa-linkedin"></i></a>
-                                </li>
+                        <br>
+                        <div class="line-group row">
+                            <div class="line-group-item pb-0 col-md-6">
+                                <h4>2012-2019</h4>
+                                <p>AMA Computer Learning Center, General Santos</p>
+                                <ul>
+                                    <li>Bachelor of Science in Information Technology</li>
+                                </ul>
+                            </div>
+                            <div class="line-group-item pb-0 col-md-6">
+                                <h4>2008-2012</h4>
+                                <p>Fatima National High School, General Santos</p>
+                                <ul>
+                                    <li>Major in Computer Technology</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <p class="py-3">
+                            In my spare time, I usually play basketball, online games, hangout with my love once and my cats.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <blockquote class="fst-italic text-center">
+                    <q>I’m always open to collaboration, feedback, or new challenges. Let’s build something impactful together.</q>
+                </blockquote>
+            </div>
+        </section>
+        <!--Skills Section-->
+        <section id="skills" class="skills section light-background">
+            <div class="container section-title">
+                 <h2>Skills</h2>
+                 <br>
+                 <div class="skill-group row">
+                    <div class="skill-content col-md-5">
+                        <h3 class="skill-title">Programming & Scripting</h3>
+                        <div class="skill-group-item" style="--icon: '\f121'">
+                            <ul>
+                                <li>VB.net</li>
+                                <li>VBA</li>
+                                <li>C#</li>
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
+                                <li>jQuery</li>
+                                <li>HTML/CSS/SASS</li>
+                                <li>PHP</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="resume">
-                        <a id="btnResume" class="btn" href="pdf/CV.pdf" download="jmlauron_resume.pdf">Download
-                            Resume</a>
-                    </div>
-                    <div class="text-style">
-                        <p>Hello! I'm Jan Mark O. Lauron, a software developer with over <label id="lblExp"></label> years of experience 
-                            in IT industry. I specialize in developing and designing Windows, web, and mobile applications, with additional experience 
-                            in operations and maintenance support. I am highly adaptable and eager to learn new technologies while taking on challenging projects.</p>
-                    </div>
-                </div>
-                <div id="skill" class="info-content">
-                    <h2 class="text-title xl">Skills</h2>
-                    <div class="skill">
-                        <div class="skill-content">
-                            <div class="skill-head"></div>
-                            <div class="skill-details">
-                                <i class="fa fa-code skill-icon"></i>
-                                <h4 class="text-style text-title">Programming/Scripting</h4>
-                                <ul class="text-style test">
-                                    <li>VB.net</li>
-                                    <li>VBA</li>
-                                    <li>C#</li>
-                                    <li>Java</li>
-                                    <li>JavaScript</li>
-                                    <li>TypeScript</li>
-                                    <li>jQuery</li>
-                                    <li>HTML/CSS/SASS</li>
-                                    <li>PHP</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="skill-content">
-                            <div class="skill-head"></div>
-                            <div class="skill-details">
-                                <i class="fas fa-tools skill-icon"></i>
-                                <h4 class="text-style text-title">Framework and Tools</h4>
-                                <ul class="text-style test">
-                                    <li>ASP.Net Core API</li>
-                                    <li>ASP.Net Core MVC</li>
-                                    <li>Entity Framework</li>
-                                    <li>CodeIgniter</li>
-                                    <li>NativeScript</li>
-                                    <li>Angular</li>
-                                    <li>Postman</li>
-                                    <li>Bootstrap</li>
-                                    <li>Memcached</li>
-                                    <li>JWT</li>
-                                    <li>GIT</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="skill-content">
-                            <div class="skill-head"></div>
-                            <div class="skill-details">
-                                <i class="fa fa-database skill-icon"></i>
-                                <h4 class="text-style text-title">Database</h4>
-                                <ul class="text-style">
-                                    <li>MSSQL</li>
-                                    <li>MySQL</li>
-                                    <li>Oracle</li>
-                                    <li>SQLite</li>
-                                    <li>MariaDB</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="skill-content">
-                            <div class="skill-head"></div>
-                            <div class="skill-details">
-                                <i class="fas fa-photo-video skill-icon"></i>
-                                <h4 class="text-style text-title">Multimedia</h4>
-                                <ul class="text-style">
-                                    <li>Photo Editing <br/> (Photoshop)</li>
-                                    <li>Video Editing <br/> (Filmora, Capcut)</li>
-                                    <li>Audio Editing <br/> (Cool Edit Pro)</li>
-                                </ul>
-                            </div>
+                    <div class="skill-content col-md-5">
+                        <h3 class="skill-title">Frameworks & Tools</h3>
+                        <div class="skill-group-item" style="--icon: '\f7d9'">
+                            <ul>
+                               <li>ASP.Net Core API</li>
+                                <li>ASP.Net Core MVC</li>
+                                <li>Entity Framework</li>
+                                <li>CodeIgniter</li>
+                                <li>NativeScript</li>
+                                <li>Angular</li>
+                                <li>Postman</li>
+                                <li>Bootstrap</li>
+                                <li>Memcached</li>
+                                <li>JWT</li>
+                                <li>GIT</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div id="projects" class="info-content">
-                    <div class="projects">
-                        <h2 class="text-title xl">Projects</h2>
-                        <div class="proj-box">
-                            <div class="proj-box-item">
-                                <div class="proj-head"></div>
-                                <div class="proj-details">
-                                    <h4 class="text-title m text-success">Employee DTR with Fingerprint Scanner (Windows and Web Application</h4>
-                                    <p class="text-desc sm">
-                                      • Developed a Windows Forms desktop application for employee log-in/out tracking via fingerprint scanner.
-                                      <br><br>• Developed a Windows Forms desktop application that serves as a custom print helper for employee log-in/out records.
-                                      <br><br> • Built a complementary web application to correct incomplete scans and manage daily time records.
-                                      <br><br>• Tech Stack:<ul>
-                                        <li>C#</li>
-                                        <li>ASP.Net MVC</li>
-                                        <li>Windows forms</li>
-                                        <li>Crystal Report</li>
-                                        <li>Razor</li>
-                                        <li>HTML</li>
-                                        <li>SASS</li>
-                                        <li>JavaScript</li>
-                                        <li>jQuery</li>
-                                        <li>Bootstrap</li>
-                                        <li>Oracle</li>
-                                      </ul>
-                                    </p>
-                                    <button class="btn" onclick="window.open('https://drive.google.com/file/d/1wTIfB3tMPym1ojUsavhHS6W5U-U-obSR/view?usp=sharing', '_blank')">View Web Portal</button>
-                                    <button class="btn" onclick="window.open('https://drive.google.com/file/d/1v_Q1qNFwIlm8ldI_oS9eY--x9UNmjXHp/view?usp=sharing', '_blank')">View Windows App</button>
-                                </div>
+                    <div class="skill-content col-md-5">
+                        <h3 class="skill-title">Databases</h3>
+                        <div class="skill-group-item" style="--icon: '\f233'">
+                            <ul>
+                                <li>MSSQL</li>
+                                <li>MySQL</li>
+                                <li>Oracle</li>
+                                <li>SQLite</li>
+                                <li>MariaDB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill-content col-md-5">
+                        <h3 class="skill-title">Multimedia</h3>
+                        <div class="skill-group-item" style="--icon: '\f87c'">
+                            <ul>
+                                <li>Photo Editing <br/> (Photoshop)</li>
+                                <li>Video Editing <br/> (Filmora, Capcut)</li>
+                                <li>Audio Editing <br/> (Cool Edit Pro)</li>
+                            </ul>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+        <!--Projects-->
+        <section id="projects" class="projects section">
+             <div class="container section-title">
+                <h2>Projects</h2>
+                <br>
+                <div class="accordion">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <span>Employee DTR with Fingerprint Scanner (Windows and Web Application)</span>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p><i class="fas fa-greater-than"></i>&emsp;Developed a Windows Forms desktop application for employee log-in/out tracking via fingerprint scanner.</p>
+                            <p><i class="fas fa-greater-than"></i>&emsp;Developed a Windows Forms desktop application that serves as a custom print helper for employee log-in/out records.</p>
+                            <p><i class="fas fa-greater-than"></i>&emsp;Built a complementary web application to correct incomplete scans and manage daily time records.</p>
+                            <ul>
+                                <li>C#</li>
+                                <li>ASP.Net MVC</li>
+                                <li>Windows forms</li>
+                                <li>Crystal Report</li>
+                                <li>Razor</li>
+                                <li>HTML</li>
+                                <li>SASS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                                <li>Oracle</li>
+                            </ul>
+                            <div class="proj-btn-content">
+                                <button class="proj-btn" onclick="window.open('https://drive.google.com/file/d/1wTIfB3tMPym1ojUsavhHS6W5U-U-obSR/view?usp=sharing', '_blank')">View Web Portal</button>
+                                <button class="proj-btn" onclick="window.open('https://drive.google.com/file/d/1v_Q1qNFwIlm8ldI_oS9eY--x9UNmjXHp/view?usp=sharing', '_blank')">View Windows App</button>
                             </div>
-                            <div class="proj-box-item">
-                                <div class="proj-head"></div>
-                                <div class="proj-details">
-                                    <h4 class="text-title m text-success">Call to Shop (Mobile, Web and Windows Applications)</h4>
-                                    <p class="text-desc sm">
-                                      • Built a mobile app for customer rewards using card reading devices and QR/barcode scanning.
-                                      <br><br> • Developed a web application (web portal) to manage customer orders from placement to delivery, streamlining operations during the pandemic.
-                                      <br><br> • Developed a kiosk-based web application that enables order pickers to track and monitor order statuses within the supermarket area.
-                                      <br><br> • Developed a Windows Forms desktop application that serves as a custom print helper to print customer orders.
-                                      <br><br> • Tech Stack: <ul>
-                                        <li>NativeScript</li>
-                                        <li>XML</li>
-                                        <li>SQLite</li>
-                                        <li>C#</li>
-                                        <li>Windows forms</li>
-                                        <li>Crystal Report</li>
-                                        <li>ASP.Net MVC</li>
-                                        <li>Razor</li>
-                                        <li>HTML</li>
-                                        <li>SASS</li>
-                                        <li>JavaScript</li>
-                                        <li>jQuery</li>
-                                        <li>Bootstrap</li>
-                                        <li>MariaDB</li>
-                                      </ul>
-                                    </p>
-                                    <button class="btn" onclick="window.open('https://docs.google.com/presentation/d/1p1vZFz1_AKjpP7HXTmLXunmrc86jfWlQ/edit?usp=drive_link&ouid=110390353029587119944&rtpof=true&sd=true', '_blank')">View Mobile App</button>
-                                    <button class="btn" onclick="window.open('https://drive.google.com/file/d/1Hp4mdqpGlUI-XJHafwVIeAq7skaZ9tPn/view?usp=sharing', '_blank')">View Web Portal</button>
-                                    <button class="btn" onclick="window.open('https://drive.google.com/file/d/1_9Ce43qgP6o1g3A1p0pJXSzuttzRcEnS/view?usp=sharing', '_blank')">View Web Kiosk</button>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Call to Shop (Mobile, Web and Windows Applications)</span>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p><i class="fas fa-greater-than"></i>&emsp;Built a mobile app for customer rewards using card reading devices and QR/barcode scanning</p>
+                            <p><i class="fas fa-greater-than"></i>&emsp;Developed a web application (web portal) to manage customer orders from placement to delivery, streamlining operations during the pandemic.</p>
+                            <p><i class="fas fa-greater-than"></i>&emsp;Developed a kiosk-based web application that enables order pickers to track and monitor order statuses within the supermarket area.</p>
+                            <p><i class="fas fa-greater-than"></i>&emsp;Developed a Windows Forms desktop application that serves as a custom print helper to print customer orders.</p>
+                            <ul>
+                                <li>NativeScript</li>
+                                <li>XML</li>
+                                <li>SQLite</li>
+                                <li>C#</li>
+                                <li>Windows forms</li>
+                                <li>Crystal Report</li>
+                                <li>ASP.Net MVC</li>
+                                <li>Razor</li>
+                                <li>HTML</li>
+                                <li>SASS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                                <li>MariaDB</li>
+                            </ul>
+                            <div class="proj-btn-content">
+                                <button class="proj-btn" onclick="window.open('https://docs.google.com/presentation/d/1p1vZFz1_AKjpP7HXTmLXunmrc86jfWlQ/edit?usp=drive_link&ouid=110390353029587119944&rtpof=true&sd=true', '_blank')">View Mobile App</button>
+                                <button class="proj-btn" onclick="window.open('https://drive.google.com/file/d/1Hp4mdqpGlUI-XJHafwVIeAq7skaZ9tPn/view?usp=sharing', '_blank')">View Web Portal</button>
+                                <button class="proj-btn" onclick="window.open('https://drive.google.com/file/d/1_9Ce43qgP6o1g3A1p0pJXSzuttzRcEnS/view?usp=sharing', '_blank')">View Web Kiosk</button>
                             </div>
-                            <div class="proj-box-item">
-                                <div class="proj-head"></div>
-                                <div class="proj-details">
-                                    <h4 class="text-title m text-success">HR Offense Management System</h4>
-                                    <p class="text-desc sm">
-                                      • A web-based application designed to log employee offenses and company policy violations, 
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>HR Offense Management System</span>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p><i class="fas fa-greater-than"></i>&emsp;A web-based application designed to log employee offenses and company policy violations, 
                                       while efficiently managing the corresponding disciplinary actions, penalties, and documentation. 
                                       It streamlines incident tracking, ensures compliance with HR protocols, and provides secure access to case 
-                                      histories for authorized personnel.
-                                      <br><br> • Tech Stack: <ul>
-                                        <li>CodeIgniter</li>
-                                        <li>PHP</li>
-                                        <li>HTML</li>
-                                        <li>SASS</li>
-                                        <li>JavaScript</li>
-                                        <li>jQuery</li>
-                                        <li>Bootstrap</li>
-                                        <li>MySQL</li>
-                                      </ul>
-                                    </p>
-                                    <button class="btn" onclick="window.open('https://github.com/jmlauron118/HROMS', '_blank')">View Code</button>
-                                    <button class="btn" onclick="window.open('https://docs.google.com/presentation/d/1wg_ioMYtIHJQy0skKoklDWOrClEokGpB/edit?usp=sharing&ouid=110390353029587119944&rtpof=true&sd=true', '_blank')">View Web App</button>
-                                </div>
+                                      histories for authorized personnel.</p>
+                            <ul>
+                                <li>CodeIgniter</li>
+                                <li>PHP</li>
+                                <li>HTML</li>
+                                <li>SASS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                                <li>MySQL</li>
+                            </ul>
+                            <div class="proj-btn-content">
+                                <button class="proj-btn" onclick="window.open('https://github.com/jmlauron118/HROMS', '_blank')">View Code</button>
+                                <button class="proj-btn" onclick="window.open('https://docs.google.com/presentation/d/1wg_ioMYtIHJQy0skKoklDWOrClEokGpB/edit?usp=sharing&ouid=110390353029587119944&rtpof=true&sd=true', '_blank')">View Web App</button>
                             </div>
-                            <div class="proj-box-item">
-                                <div class="proj-head"></div>
-                                <div class="proj-details">
-                                    <h4 class="text-title m text-success">ACEMC - Shareholder</h4>
-                                    <p class="text-desc sm">
-                                      • A web-based application that helps manage shareholders, track payments, and keep investor connected. 
-                                      It allows both admin and shareholders to easily manage investments, and view transactions.
-                                      <br><br> • Tech Stack: <ul>
-                                        <li>C#</li>
-                                        <li>ASP.Net MVC</li>
-                                        <li>Razor</li>
-                                        <li>HTML</li>
-                                        <li>SASS</li>
-                                        <li>JavaScript</li>
-                                        <li>jQuery</li>
-                                        <li>Bootstrap</li>
-                                        <li>MariaDB</li>
-                                      </ul>
-                                    </p>
-                                    <button class="btn" onclick="window.open('https://docs.google.com/presentation/d/1cNmTEuZIPOJRPS9PIRLyeAGYtQlpiNTT/edit?usp=sharing&ouid=110390353029587119944&rtpof=true&sd=true', '_blank')">View Web App</button>
-                                </div>
-                            </div>
-                            <div class="proj-box-item">
-                                <div class="proj-head"></div>
-                                <div class="proj-details">
-                                    <h4 class="text-title m text-success">Line Dots</h4>
-                                    <p class="text-desc sm">
-                                      • An Android game app that allows two players to compete. The goal is simple: the first player to form a vertical, horizontal, or diagonal line wins. 
-                                      The game offers two board modes — 3x3 and 4x4.
-                                      <br><br> • Tech Stack: <ul>
-                                        <li>NativeScript</li>
-                                        <li>XML</li>
-                                        <li>JavaScript</li>
-                                        <li>SASS</li>
-                                        <li>SQLite</li>
-                                      </ul>
-                                    </p>
-                                    <button class="btn" onclick="window.open('https://github.com/jmlauron118/Lines', '_blank')">View Code</button>
-                                    <button class="btn" onclick="window.open('https://drive.google.com/file/d/1oDYyzPwjffNNMGjuomlbnpQpvu9vEJpM/view?usp=sharing', '_blank')">Download APK</button>
-                                </div>
-                            </div>
-                            <!-- <div class="proj-box-item">
-                                <div class="proj-head"></div>
-                                <div class="proj-details">
-                                    <h4 class="text-title m text-success">Finance Tracker (Personal app - In progress)</h4>
-                                    <p class="text-desc sm">
-                                      • A web application designed to help you manage, track, and organize your financial budget and expenses with ease. 
-                                      It offers intuitive tools for categorizing transactions, and visualizing your financial health through interactive charts and reports.
-                                      <br><br> • Tech Stack: <ul>
-                                        <li>Angular</li>
-                                        <li>HTML</li>
-                                        <li>TypeScript</li>
-                                        <li>SASS</li>
-                                        <li>Bootstrap</li>
-                                        <li>Asp.Net Core API</li>
-                                        <li>Entity Framework</li>
-                                        <li>MS SQL</li>
-                                      </ul>
-                                    </p>
-                                    <button class="btn" onclick="window.open('https://github.com/jmlauron118/FinanceTrackerUI', '_blank')">View Code (UI)</button>
-                                    <button class="btn" onclick="window.open('https://github.com/jmlauron118/FINANCE.TRACKER.API', '_blank')">View Code (API)</button>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
-                </div>
-                <div id="experience" class="info-content">
-                    <div class="experience">
-                        <h2 class="text-title xl">Work Experience</h2>
-                        <div class="exp-box">
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">July 2022 - Present</h4>
-                                    <label class="text-title m text-default">WeServ Systems International, Inc (Fujitsu PH)</label>
-                                    <h4 class="job-address sm">Cebu City</h4>
-                                    <h4 class="job-desc xsm">Application Systems Engineer</h4>
-                                    <p class="text-desc sm">
-                                      • Handled system inquiries, technical problems, and support tickets, resolving 90% within SLA.
-                                      <br> • Supported multiple Operation and Maintenance projects, providing bug fixes and system updates.
-                                      <br> • Improved customer satisfaction ny proactively identifying recurring issues and implementing long-term solutions.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">June 2021 - July 2022</h4>
-                                    <label class="text-title m text-default">General Tuna Corporation</label>
-                                    <h4 class="job-address sm">General Santos City</h4>
-                                    <h4 class="job-desc xsm">Inhouse Programmer</h4>
-                                    <p class="text-desc sm">
-                                      • Designed and developed web applications with CodeIgniter (PHP) and MySQL, implementing both
-                                      frontend and backend business logic to improve system usability and performance.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">Dec 2018 - May 2021</h4>
-                                    <label class="text-title m text-default">KCC Property Holdings Inc.</label>
-                                    <h4 class="job-address sm">General Santos City</h4>
-                                    <h4 class="job-desc xsm">Associate Software Engineer</h4>
-                                    <p class="text-desc sm">
-                                      • Designed and implemented web and desktop applications using .NET technologies, as well as mobile applications with the NativeScript framework.
-                                      <br> • Collaborated with cross-functional teams to gather requirements, design system features, and implement solutions.
-                                      <br> • Delivered projects on time while ensuring maintainability and scalability.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">April 2017 - June 2017</h4>
-                                    <label class="text-title m text-default">A & L Rabbi Ads and Crafts</label>
-                                    <h4 class="job-address sm">General Santos City</h4>
-                                    <h4 class="job-desc xsm">Layout Artist</h4>
-                                    <p class="text-desc sm">
-                                      • Created and designed layouts for medals, mugs, plaques, button pins, and tarpaulins, ensuring high-quality 
-                                      and visually appealing outputs for production.
-                                    </p>
-                                </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>ACEMC - Shareholder</span>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p><i class="fas fa-greater-than"></i>&emsp;A web-based application that helps manage shareholders, track payments, and keep investor connected. 
+                                      It allows both admin and shareholders to easily manage investments, and view transactions.</p>
+                            <ul>
+                                <li>C#</li>
+                                <li>ASP.Net MVC</li>
+                                <li>Razor</li>
+                                <li>HTML</li>
+                                <li>SASS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                                <li>MariaDB</li>
+                            </ul>
+                            <div class="proj-btn-content">
+                                <button class="proj-btn" onclick="window.open('https://docs.google.com/presentation/d/1cNmTEuZIPOJRPS9PIRLyeAGYtQlpiNTT/edit?usp=sharing&ouid=110390353029587119944&rtpof=true&sd=true', '_blank')">View Web App</button>
                             </div>
                         </div>
-                        <br />
-                        <br />
-                        <h2 class="text-title xl">Achievements/Seminars</h2>
-                        <div class="exp-box">
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">December 12, 2018</h4>
-                                    <label class="text-title m text-default">Visual Graphics and Design NCIII</label>
-                                    <h4 class="job-desc xsm">Mary Mediatrix of All Grace Academy, Inc <br/>Digos City</h4>
-                                    <p class="text-desc sm">
-                                      During the assessment, we were tasked with creating a restaurant logo, brochure, business card, and web design. It was a 
-                                      valuable experience, as we gained knowledge and insights from our assessor that can be applied to future business 
-                                      endeavors and professional work.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">September 5-7, 2018</h4>
-                                    <label class="text-title m text-default">20th National Tuna Congress</label>
-                                    <h4 class="job-desc xsm">SM Mall of Gensan, Trade Hall 1 <br/> General Santos City</h4>
-                                    <p class="text-desc sm">
-                                      We were invited to present LigiDex and share our experience during the 1st SOX ICT Startup Challenge.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">September 14-16, 2016</h4>
-                                    <label class="text-title m text-default">SOX ICT Startup Challenge</label>
-                                    <h4 class="job-desc xsm">Best Concept/Prototype - 1st Place <br/> Veranza  Mall, General Santos City</h4>
-                                    <p class="text-desc sm">
-                                      We developed an Android application prototype called LigiDex. The app is designed to track the validity and expiration of 
-                                      driver’s licenses and vehicle registrations. It also helps monitor vehicle violations and, with the owner’s approval, 
-                                      allows users to review other vehicles’ information.
-                                    </p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Line Dots</span>
+                            <i class="fa-solid fa-chevron-down icon"></i>
                         </div>
-                        <br />
-                        <br />
-                        <h2 class="text-title xl">Education</h2>
-                        <div class="exp-box">
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">2012-2018</h4>
-                                    <label class="text-title m text-default">Bachelor of Science in Information
-                                        Technology</label>
-                                    <h4 class="job-desc sm" style="padding-top: 10px;">AMA Computer Learning Center</h4>
-                                </div>
-                            </div>
-                            <div class="exp-box-item">
-                                <div class="exp-head"></div>
-                                <div class="exp-details">
-                                    <h4 class="text-title m text-success">2008-2012</h4>
-                                    <label class="text-title m text-default">Major in Computer Technology</label>
-                                    <h4 class="job-desc sm" style="padding-top: 10px;">Fatima National High School</h4>
-                                </div>
+                        <div class="accordion-content">
+                            <p><i class="fas fa-greater-than"></i>&emsp;An Android game app that allows two players to compete. The goal is simple: the first player to form a 
+                                vertical, horizontal, or diagonal line wins. The game offers two board modes — 3x3 and 4x4.</p>
+                            <ul>
+                                <li>NativeScript</li>
+                                <li>XML</li>
+                                <li>JavaScript</li>
+                                <li>SASS</li>
+                                <li>SQLite</li>
+                            </ul>
+                            <div class="proj-btn-content">
+                                <button class="proj-btn" onclick="window.open('https://github.com/jmlauron118/Lines', '_blank')">View Code</button>
+                                <button class="proj-btn" onclick="window.open('https://drive.google.com/file/d/1oDYyzPwjffNNMGjuomlbnpQpvu9vEJpM/view?usp=sharing', '_blank')">Download APK</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="contact" class="info-content">
-                    <div class="contact">
-                        <h2 class="text-title xl">Contact</h2>
-                        <div class="contact-box">
-                            <div class="contact-info">
-                                <div class="contact-details">
-                                    <div class="cont-line">
-                                        <strong class="title">Email</strong>
-                                        <span class="cont">janmarklauron@gmail.com</span>
-                                    </div>
-                                    <div class="cont-line">
-                                        <strong class="title">Address</strong>
-                                        <span class="cont">Blk 40, Lot 18, Employees Village, Brgy. Fatima, Uhaw,
-                                            General Santos City, South Cotabato, Philippines</span>
-                                    </div>
-                                    <div class="cont-line">
-                                        <strong class="title">Phone</strong>
-                                        <span class="cont">+639310322745</span>
-                                    </div>
-                                    <div class="cont-line">
-                                        <strong class="title">What's App</strong>
-                                        <span class="cont">+639310322745</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contact-map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.0121200878066!2d125.1120686534135!3d6.072647874712561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f7a23cbbb63b01%3A0x498b35503c051ba7!2sFatima%20Barangay%20Hall!5e1!3m2!1sen!2sph!4v1587010079819!5m2!1sen!2sph"
-                                    class="map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                                    tabindex="0"></iframe>
-                            </div>
+            </div>  
+        </section>
+        <!--Experience-->
+        <section id="experience" class="experience section light-background">
+            <div class="container section-title">
+                <h2>Experience</h2>
+                <br>
+                <div class="row">
+                    <div class="line-group col-md-6">
+                        <h3>Professional Experience</h3>
+                        <div class="line-group-item">
+                            <h4>Application Systems Engineer</h4>
+                            <h5>July 2022 - Present</h5>
+                            <p>WeServ Systems International, Inc (Fujitsu PH), Cebu City, PH | Remote</p>
+                            <ul>
+                                <li>Handled system inquiries, technical problems, and support tickets, resolving 90% within SLA.</li>
+                                <li>Supported multiple Operation and Maintenance projects, providing bug fixes and system updates.</li>
+                                <li>Improved customer satisfaction by proactively identifying recurring issues and implementing long-term solutions.</li>
+                            </ul>
                         </div>
-                        <div class="quote">
-                           <figure>
-                             <blockquote>
-                               <q>Make every effort to change things you do not like. If you cannot make a change, change the way you have been thinking. 
-                                You might find a new solution.</q>
-                             </blockquote>
-                             <figcaption align="end"> — Maya Angelou </figcaption>
+                        <div class="line-group-item">
+                            <h4>Inhouse Programmer</h4>
+                            <h5>June 2021 - July 2022</h5>
+                            <p>General Tuna Corporation, General Santos City, PH | On-site</p>
+                            <ul>
+                                <li>Designed and developed web applications using CodeIgniter (PHP) and MySQL, ensuring efficient integration between system components.</li>
+                                <li>Implemented both frontend and backend business logic to enhance overall usability, responsiveness, and workflow efficiency.</li>
+                                <li>These improvements contributed to better system performance, smoother user experiences, and more maintainable application architecture.</li>
+                            </ul>
+                        </div>
+                        <div class="line-group-item">
+                            <h4>Associate Software Engineer</h4>
+                            <h5>Dec 2018 - May 2021</h5>
+                            <p>KCC Property Holdings Inc., General Santos City, PH | On-site</p>
+                            <ul>
+                                <li>Designed and implemented web and desktop applications using .NET technologies, as well as mobile applications with the NativeScript framework.</li>
+                                <li>Collaborated with cross-functional teams to gather requirements, design system features, and implement solutions.</li>
+                                <li>Delivered projects on time while ensuring maintainability and scalability.</li>
+                            </ul>
+                        </div>
+                        <div class="line-group-item">
+                            <h4>Layout Artist</h4>
+                            <h5>April 2017 - June 2017</h5>
+                            <p>A & L Rabbi Ads and Crafts, General Santos City, PH | On-site</p>
+                            <ul>
+                                <li>Created and designed layouts for medals, mugs, plaques, button pins, and tarpaulins, ensuring high-quality 
+                                    and visually appealing outputs for production.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line-group col-md-6">
+                        <h3>Achievements & Seminars</h3>
+                        <div class="line-group-item">
+                            <h4>Visual Graphics and Design NCIII</h4>
+                            <h5>December 12, 2018</h5>
+                            <p>Mary Mediatrix of All Grace Academy, Inc, Digos City, PH</p>
+                            <ul>
+                                <li>During the assessment, we were tasked with creating a complete branding package that included a restaurant logo, brochure, 
+                                    business card, and web design. The experience was highly valuable, providing practical insights and industry-relevant guidance 
+                                    from our assessor. These learnings will serve as a strong foundation for future business projects and professional design work.</li>
+                            </ul>
+                        </div>
+                        <div class="line-group-item">
+                            <h4>20th National Tuna Congress</h4>
+                            <h5>September 5-7, 2018</h5>
+                            <p>SM Mall of Gensan, Trade Hall 1, General Santos City, PH</p>
+                            <ul>
+                                <li>We were invited to present LigiDex, a mobile app prototype developed during the first SOX ICT Startup Challenge in General Santos City, 
+                                    and to share our insights and experiences from participating in the event.</li>
+                            </ul>
+                        </div>
+                        <div class="line-group-item">
+                            <h4>SOX ICT Startup Challenge</h4>
+                            <h5>September 14-16, 201</h5>
+                            <p>Best Concept/Prototype - 1st Place <br/> Veranza  Mall, General Santos City</p>
+                            <ul>
+                                <li>We developed an Android application prototype called LigiDex, designed to track the validity and expiration of driver’s 
+                                    licenses and vehicle registrations. The app also provides tools for monitoring vehicle violations and, with the owner’s approval, 
+                                    enables users to securely review relevant information about other vehicles.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="contact" class="contact section">
+            <div class="container section-title">
+                <h2>Contact</h2>
+                <br>
+                <div class="row d-flex justify-content-around">
+                    <div class="contact-details">
+                        <div class="mb-4">
+                            <h3>Available for <br>Freelance opportunities.</h3>
+                            <p>Got an exciting project you’d like help with? Drop me an email or send me a quick message!</p>
+                        </div>
+                        <div class="info-wrap">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt flex-shrink-0"></i>
+                                <div>
+                                    <h5>Address</h5>
+                                    <p>Phase 1 East, Block 3 Lot 25, Jacinto St. Doña Soledad Subd. Brgy. Labangal, General Santos City, Mindanao, Philippines</p>
+                                </div>
+                            </div>
+                            <div class="info-item d-flex align-items-center">
+                                <i class="fas fa-phone-alt flex-shrink-0"></i>
+                                <div>
+                                    <h5>Call (Phone, Viber, What's up)</h5>
+                                    <p>+63 931 032 2745</p>
+                                </div>
+                            </div>
+                            <div class="info-item d-flex align-items-center">
+                                <i class="fas fa-envelope-open-text flex-shrink-0"></i>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p>janmarklauron@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-map-responsive">
+                            <div class="embed-map-container">
+                                <iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=6.112830%2C%20125.143477&t=k&z=18&ie=UTF8&iwloc=B&output=embed"></iframe><a href="https://sprunkiretake.net" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">sprunki retake</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email-content">
+                        <div class="email-content-header">
+                            <h4>Get in touch</h4>
+                            <label id="display-message" class="display-message">Test!</label>
+                        </div>
+                        <form id="emailForm">
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" class="form-control" autocomplete="off"/>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" id="email" class="form-control" autocomplete="off"/>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="subject">Subject</label>
+                                    <input type="email" id="subject" class="form-control" autocomplete="off"/>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" name="message" rows="10" id="message"></textarea>
+                                </div>
+                                <div class="send-button">
+                                    <button id="sendEmail" class="btn primary-button">
+                                        <i class="fas fa-paper-plane"></i> Send Email
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>&#169; <span>Copyright</span> <strong class="px-1 sitename">JMPortfolio</strong> 2020<br><span>All Rights Reserved</span></p>
+            </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="footer-contact">
-            <a class="cont-box" href="https://x.com/jmlauron18" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a class="cont-box" href="https://web.facebook.com/jmlauron118?ref=bookmarks" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a class="cont-box" href="https://www.instagram.com/jmlauron118/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a class="cont-box" href="https://www.linkedin.com/in/jan-mark-lauron-014576a8/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="footer-mess">
-            <a class="footer-text light">Copyright &#169; 2020</a>
-            <a class="footer-text light">ALL RIGHT RESERVED</a>
-        </div>
-    </div>
+    </footer>
+<script src="content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="content/js/general.js" type="text/javascript"></script>
+<script src="content/js/main.js" type="text/javascript"></script>
 </body>
-<script src="./content/js/main.js" type="text/javascript"></script>
-<script src="./content/js/general.js" type="text/javascript"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
 </html>
